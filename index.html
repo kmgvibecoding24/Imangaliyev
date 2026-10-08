@@ -1,0 +1,1439 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Фауна Прииртышья</title>
+<meta name="description" content="Животный мир Павлодарской области: каталог видов, Красная книга, карта природных зон и интересные факты.">
+<meta property="og:title" content="Животный мир Павлодарской области">
+<meta property="og:description" content="От степного орла до байбака — познакомьтесь с соседями по Прииртышью.">
+<meta property="og:type" content="website">
+<meta name="theme-color" content="#5c7a4e">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=PT+Serif:wght@700&display=swap&subset=cyrillic-ext" rel="stylesheet">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebSite","name":"Фауна Павлодарского Прииртышья","inLanguage":["kk","ru","en"],"about":"Животный мир Павлодарской области"}
+</script>
+<style>
+:root{
+  --bg:#f7f2e7; --surface:#fffdf8; --surface-2:#efe7d4; --text:#26261f; --muted:#5b5648;
+  --border:#ddd2b8; --sage:#4f6d43; --sage-soft:#e2e9d6; --sky:#2f6f96; --sky-soft:#dbe9f2;
+  --ochre:#a8661c; --ochre-soft:#f3e2c4; --red:#b3261e; --red-soft:#fbe3e0;
+  --shadow:0 1px 2px rgba(60,50,20,.06),0 6px 20px rgba(60,50,20,.08);
+  --radius:16px; --header-h:64px;
+  --font:"Inter",system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;
+  --font-head:"PT Serif",Georgia,serif;
+  color-scheme:light;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --bg:#161913; --surface:#1f231c; --surface-2:#2a2f25; --text:#ece6d6; --muted:#b4ad9a;
+    --border:#3a4134; --sage:#9cc287; --sage-soft:#2b3a26; --sky:#86bde0; --sky-soft:#1d3240;
+    --ochre:#e5aa5c; --ochre-soft:#3d2f1b; --red:#ff8a80; --red-soft:#4a1f1c;
+    --shadow:0 1px 2px rgba(0,0,0,.3),0 6px 20px rgba(0,0,0,.3);
+    color-scheme:dark;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#161913; --surface:#1f231c; --surface-2:#2a2f25; --text:#ece6d6; --muted:#b4ad9a;
+  --border:#3a4134; --sage:#9cc287; --sage-soft:#2b3a26; --sky:#86bde0; --sky-soft:#1d3240;
+  --ochre:#e5aa5c; --ochre-soft:#3d2f1b; --red:#ff8a80; --red-soft:#4a1f1c;
+  color-scheme:dark;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--text);font:16px/1.6 var(--font);overflow-x:hidden}
+img,svg{max-width:100%}
+a{color:var(--sky)}
+button,input,select{font:inherit;color:inherit}
+:focus-visible{outline:3px solid var(--ochre);outline-offset:2px;border-radius:6px}
+.sr{position:absolute!important;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+.skip{position:absolute;left:8px;top:-60px;background:var(--surface);padding:8px 16px;z-index:100;border-radius:8px}
+.skip:focus{top:8px}
+.wrap{max-width:1200px;margin:0 auto;padding:0 16px}
+main>section{scroll-margin-top:calc(var(--header-h) + 8px);padding:64px 0}
+h1,h2,h3{line-height:1.2;margin:0 0 16px}
+h2{font-family:var(--font-head);font-size:clamp(28px,4vw,40px)}
+h3{font-size:20px}
+.lead{color:var(--muted);max-width:720px;margin:0 0 32px;font-size:18px}
+.ic{width:20px;height:20px;flex:none;vertical-align:middle}
+.ornament{height:16px;margin:0 auto;max-width:1200px;background:var(--ochre);opacity:.45;
+  -webkit-mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 16'%3E%3Cpath d='M2 14C2 6 8 2 12 6c2 2 0 5-2 4M30 14c0-8-6-12-10-8-2 2 0 5 2 4M12 6l4 6 4-6' fill='none' stroke='black' stroke-width='1.6'/%3E%3C/svg%3E") repeat-x center/32px 16px;
+  mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 16'%3E%3Cpath d='M2 14C2 6 8 2 12 6c2 2 0 5-2 4M30 14c0-8-6-12-10-8-2 2 0 5 2 4M12 6l4 6 4-6' fill='none' stroke='black' stroke-width='1.6'/%3E%3C/svg%3E") repeat-x center/32px 16px}
+
+/* Header */
+.site-header{position:sticky;top:0;z-index:50;background:color-mix(in srgb,var(--bg) 88%,transparent);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-bottom:1px solid var(--border)}
+.header-inner{display:flex;align-items:center;gap:16px;height:var(--header-h)}
+.logo{display:flex;align-items:center;gap:8px;text-decoration:none;color:var(--text);font-weight:800;font-size:17px;line-height:1.1;margin-right:auto}
+.logo svg{width:36px;height:36px}
+.mainnav ul{display:flex;gap:4px;list-style:none;margin:0;padding:0}
+.mainnav a{display:block;white-space:nowrap;padding:8px 12px;border-radius:999px;color:var(--text);text-decoration:none;font-weight:500;font-size:15px}
+.mainnav a:hover{background:var(--surface-2)}
+.mainnav a.active{background:var(--sage-soft);color:var(--sage)}
+.langs{display:flex;border:1px solid var(--border);border-radius:999px;padding:2px}
+.langs button{border:0;background:none;padding:6px 10px;border-radius:999px;cursor:pointer;font-size:13px;font-weight:700;min-width:44px;min-height:36px}
+.langs button[aria-pressed="true"]{background:var(--sage);color:var(--bg)}
+.burger{display:none;border:1px solid var(--border);background:var(--surface);border-radius:12px;width:44px;height:44px;cursor:pointer}
+@media (max-width:1099px){
+  .burger{display:grid;place-items:center}
+  .mainnav{position:fixed;inset:var(--header-h) 0 auto 0;background:var(--surface);border-bottom:1px solid var(--border);box-shadow:var(--shadow);display:none}
+  .mainnav.open{display:block}
+  .mainnav ul{flex-direction:column;padding:8px 16px 16px}
+  .mainnav a{padding:12px 16px;font-size:17px}
+  .logo span{font-size:15px}
+}
+@media (max-width:420px){.logo span{display:none}}
+.demo-banner{background:var(--ochre-soft);color:var(--text);font-size:14px;text-align:center;padding:8px 16px;border-bottom:1px solid var(--border)}
+
+/* Hero */
+.hero{position:relative;overflow:hidden;padding:72px 0 120px;background:linear-gradient(180deg,var(--sky-soft) 0%,var(--bg) 100%)}
+.hero-art{position:absolute;inset:auto 0 0 0;width:100%;height:220px;pointer-events:none}
+.hero .wrap{position:relative}
+.hero h1{font-family:var(--font-head);font-size:clamp(34px,6vw,64px);max-width:820px;margin-bottom:16px}
+.hero p.sub{font-size:clamp(18px,2.4vw,22px);color:var(--muted);max-width:640px;margin:0 0 32px}
+.searchbox{display:flex;align-items:center;gap:8px;background:var(--surface);border:2px solid var(--border);border-radius:999px;padding:6px 6px 6px 18px;max-width:560px;box-shadow:var(--shadow)}
+.searchbox:focus-within{border-color:var(--sage)}
+.searchbox input{flex:1;min-width:0;border:0;background:none;outline:none;font-size:17px;padding:8px 0}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;border:0;border-radius:999px;padding:10px 20px;min-height:44px;font-weight:600;cursor:pointer;background:var(--sage);color:var(--bg);text-decoration:none}
+.btn:hover{filter:brightness(1.08)}
+.btn.ghost{background:var(--surface);color:var(--text);border:1px solid var(--border)}
+.btn.ghost:hover{background:var(--surface-2);filter:none}
+.counters{display:flex;flex-wrap:wrap;gap:8px 24px;margin-top:32px;font-weight:600}
+.counters b{font-size:28px;color:var(--ochre);margin-right:6px;font-variant-numeric:tabular-nums}
+
+/* Zones */
+.zones-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(210px,1fr));gap:16px}
+.zone-card{display:flex;flex-direction:column;text-align:left;background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);overflow:hidden;cursor:pointer;padding:0;box-shadow:var(--shadow);transition:transform .2s}
+.zone-card:hover{transform:translateY(-3px)}
+.zone-card .zmap{background:var(--surface-2);padding:12px;display:grid;place-items:center}
+.zone-card .zmap svg{width:120px;height:114px}
+.zone-card .zbody{padding:16px}
+.zone-card h3{font-size:18px;margin-bottom:8px}
+.zone-card p{margin:0 0 8px;color:var(--muted);font-size:15px}
+.zone-card .typ{font-size:14px}
+.zone-card .go{color:var(--sage);font-weight:600;font-size:14px;margin-top:auto;padding:0 16px 16px}
+
+/* Catalog */
+.catalog{display:grid;grid-template-columns:260px 1fr;gap:32px;align-items:start}
+.filters{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:16px;position:sticky;top:calc(var(--header-h) + 16px);max-height:calc(100vh - var(--header-h) - 32px);overflow:auto}
+.filters fieldset{border:0;margin:0 0 16px;padding:0}
+.filters legend{font-weight:700;margin-bottom:8px;font-size:15px}
+.filters label{display:flex;align-items:center;gap:8px;padding:4px 0;cursor:pointer;font-size:15px;min-height:32px}
+.filters input[type=checkbox]{width:18px;height:18px;accent-color:var(--sage)}
+.filters .fhead{display:flex;justify-content:space-between;align-items:center;margin-bottom:16px}
+.filters .fhead h3{margin:0;font-size:18px}
+.filters .closef{display:none}
+.toolbar{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin-bottom:16px}
+.toolbar .searchbox{flex:1 1 280px;max-width:none;box-shadow:none;padding:4px 4px 4px 16px}
+.toolbar select{border:1px solid var(--border);background:var(--surface);border-radius:999px;padding:10px 14px;min-height:44px}
+.filter-toggle{display:none}
+.found{color:var(--muted);font-size:15px;margin:0 0 16px}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:16px}
+.chip{display:inline-flex;align-items:center;gap:6px;background:var(--sage-soft);color:var(--text);border:1px solid var(--border);border-radius:999px;padding:4px 6px 4px 12px;font-size:14px;cursor:pointer}
+.chip .x{width:20px;height:20px;display:grid;place-items:center;border-radius:50%}
+.chip:hover .x{background:var(--surface)}
+.linkbtn{background:none;border:0;color:var(--sky);text-decoration:underline;cursor:pointer;padding:4px 8px;font-size:14px}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:16px}
+.card{position:relative;display:flex;flex-direction:column;background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);overflow:hidden;cursor:pointer;text-align:left;padding:0;box-shadow:var(--shadow);transition:transform .2s,box-shadow .2s}
+.card:hover{transform:translateY(-3px)}
+.ph{position:relative;aspect-ratio:4/3;display:grid;place-items:center;color:var(--sage);overflow:hidden}
+.ph svg.sil{width:68%;opacity:.55}
+.ph[data-g=birds]{background:var(--sky-soft);color:var(--sky)}
+.ph[data-g=mammals]{background:var(--ochre-soft);color:var(--ochre)}
+.ph[data-g=fish],.ph[data-g=amphibians]{background:var(--sky-soft);color:var(--sky)}
+.ph[data-g=reptiles],.ph[data-g=insects]{background:var(--sage-soft);color:var(--sage)}
+.ph .wanted{position:absolute;bottom:8px;left:8px;right:8px;font-size:12px;color:var(--muted);text-align:center}
+.rb-badge{position:absolute;top:8px;left:8px;display:inline-flex;align-items:center;gap:4px;background:var(--red);color:#fff;border-radius:999px;padding:3px 10px 3px 6px;font-size:12px;font-weight:700}
+:root[data-theme="dark"] .rb-badge{color:#2a0d0b}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]) .rb-badge{color:#2a0d0b}}
+.rb-badge .ic{width:16px;height:16px}
+.card .cbody{padding:12px 16px 16px;display:flex;flex-direction:column;gap:4px;flex:1}
+.card h3{font-size:18px;margin:0}
+.latin{font-style:italic;color:var(--muted);font-size:14px}
+.tags{display:flex;flex-wrap:wrap;gap:6px;margin-top:8px}
+.tag{display:inline-flex;align-items:center;gap:4px;font-size:13px;background:var(--surface-2);border-radius:999px;padding:2px 10px 2px 6px;color:var(--text)}
+.tag .ic{width:16px;height:16px}
+.tag.red{background:var(--red-soft);color:var(--red);font-weight:600}
+mark{background:var(--ochre-soft);color:inherit;border-radius:3px;padding:0 1px;box-shadow:0 0 0 1px var(--ochre)}
+.empty{text-align:center;padding:48px 16px;background:var(--surface);border:1px dashed var(--border);border-radius:var(--radius)}
+.more-wrap{text-align:center;margin-top:24px}
+.backdrop-f{display:none}
+@media (max-width:899px){
+  .catalog{grid-template-columns:1fr}
+  .filter-toggle{display:inline-flex}
+  .filters{position:fixed;top:0;bottom:0;left:0;width:min(340px,88vw);max-height:none;z-index:70;border-radius:0 var(--radius) var(--radius) 0;transform:translateX(-105%);transition:transform .25s;visibility:hidden}
+  .filters.open{transform:none;visibility:visible}
+  .filters .closef{display:grid}
+  .backdrop-f.open{display:block;position:fixed;inset:0;background:rgba(0,0,0,.4);z-index:60}
+}
+.iconbtn{border:1px solid var(--border);background:var(--surface);border-radius:50%;width:44px;height:44px;place-items:center;cursor:pointer;display:grid}
+
+/* Modal */
+.modal{position:fixed;inset:0;z-index:90;display:flex;align-items:flex-start;justify-content:center;padding:24px 16px;overflow:auto}
+.modal[hidden]{display:none}
+.modal .bd{position:fixed;inset:0;background:rgba(15,15,10,.6)}
+.dialog{position:relative;background:var(--surface);border-radius:20px;max-width:860px;width:100%;box-shadow:0 20px 60px rgba(0,0,0,.35);outline:none}
+.dialog .closem{position:absolute;top:12px;right:12px;z-index:2}
+.m-top{display:grid;grid-template-columns:1fr 1fr;gap:0}
+.m-top .ph{border-radius:20px 0 0 0;aspect-ratio:auto;min-height:260px}
+.m-names{padding:24px 56px 24px 24px}
+.m-names h2{font-size:32px;margin-bottom:4px}
+.m-names table{border-collapse:collapse;margin-top:12px;font-size:15px;width:100%}
+.m-names th{text-align:left;color:var(--muted);font-weight:500;padding:4px 12px 4px 0;width:1%;white-space:nowrap}
+.m-names td{padding:4px 0}
+.m-sec{padding:0 24px 24px}
+.m-sec h3{font-size:18px;margin:24px 0 8px;display:flex;align-items:center;gap:8px}
+.short{font-size:19px;line-height:1.55;background:var(--sage-soft);border-radius:12px;padding:16px;margin:0}
+details.more{border:1px solid var(--border);border-radius:12px;padding:12px 16px;margin-top:16px}
+details.more summary{cursor:pointer;font-weight:700}
+.status-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.stbox{background:var(--surface-2);border-radius:12px;padding:12px 16px}
+.stbox .k{font-size:13px;color:var(--muted)}
+.stbox .v{font-weight:700}
+.iucn{display:inline-block;font-weight:800;border-radius:6px;padding:0 6px;margin-right:6px;background:var(--text);color:var(--bg)}
+.iucn.CR,.iucn.EN{background:var(--red);color:#fff}
+.iucn.VU,.iucn.NT{background:var(--ochre);color:#fff}
+.habitat{display:grid;grid-template-columns:180px 1fr;gap:16px;align-items:center}
+.habitat svg{width:180px;height:171px}
+.habitat ul{margin:0;padding-left:20px}
+.fact-box{background:var(--ochre-soft);border-radius:12px;padding:16px;margin:0 0 8px}
+.help-box{background:var(--red-soft);border-radius:12px;padding:16px;margin:0}
+.todo{display:inline-block;font-size:12px;font-weight:600;background:var(--ochre-soft);color:var(--ochre);border:1px solid var(--ochre);border-radius:6px;padding:0 6px;margin-left:4px;vertical-align:middle}
+.tr-note{display:inline-block;font-size:12px;color:var(--muted);border:1px dashed var(--border);border-radius:6px;padding:0 6px;margin-left:6px}
+.m-actions{display:flex;flex-wrap:wrap;gap:8px;padding:0 24px 24px}
+.verif{margin:0 24px 24px;font-size:14px;color:var(--muted);border-top:1px solid var(--border);padding-top:16px}
+@media (max-width:699px){
+  .m-top{grid-template-columns:1fr}
+  .m-top .ph{border-radius:20px 20px 0 0;min-height:200px}
+  .m-names{padding:16px 24px 8px}
+  .status-grid,.habitat{grid-template-columns:1fr}
+  .modal{padding:0}
+  .dialog{border-radius:0;min-height:100%}
+}
+
+/* Red book */
+#redbook{background:linear-gradient(180deg,var(--bg),var(--red-soft) 140%)}
+.rb-cats{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:12px;margin:0 0 32px;padding:0}
+.rb-cats div{background:var(--surface);border:1px solid var(--border);border-left:4px solid var(--red);border-radius:12px;padding:12px 16px}
+.rb-cats dt{font-weight:800}
+.rb-cats dd{margin:0;color:var(--muted);font-size:15px}
+.ribbon{display:flex;gap:16px;overflow-x:auto;scroll-snap-type:x mandatory;padding:4px 4px 16px;margin:0 -4px 32px}
+.ribbon .card{flex:0 0 200px;scroll-snap-align:start}
+.rb-help{display:grid;grid-template-columns:3fr 2fr;gap:24px}
+.rules{margin:0;padding-left:24px}
+.rules li{margin-bottom:8px}
+.report{background:var(--surface);border:2px solid var(--red);border-radius:var(--radius);padding:24px}
+.report h3{color:var(--red)}
+@media (max-width:799px){.rb-help{grid-template-columns:1fr}}
+
+/* Map */
+.map-layout{display:grid;grid-template-columns:300px 1fr;gap:24px}
+.map-side{display:flex;flex-direction:column;gap:16px}
+.map-side label{font-weight:700;display:block;margin-bottom:6px}
+.map-side select{width:100%;border:1px solid var(--border);background:var(--surface);border-radius:12px;padding:10px 12px;min-height:44px}
+.legend{display:flex;flex-direction:column;gap:6px}
+.legend button{display:flex;align-items:center;gap:10px;border:1px solid var(--border);background:var(--surface);border-radius:12px;padding:8px 12px;cursor:pointer;text-align:left;min-height:44px}
+.legend button[aria-pressed="true"]{border-color:var(--text);box-shadow:inset 0 0 0 1px var(--text)}
+.legend button.dim{opacity:.45}
+.swatch{width:18px;height:18px;border-radius:4px;flex:none}
+.zone-list{background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:12px 16px}
+.zone-list h3{font-size:16px;margin-bottom:8px}
+.zone-list ul{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:6px}
+.zone-list li button{border:1px solid var(--border);background:var(--surface-2);border-radius:999px;padding:4px 12px;cursor:pointer;font-size:14px}
+.map-box{position:relative;min-height:480px;border-radius:var(--radius);overflow:hidden;border:1px solid var(--border);background:var(--surface-2)}
+#mapEl{position:absolute;inset:0}
+.map-status{position:absolute;inset:0;display:grid;place-items:center;padding:24px;text-align:center;color:var(--muted)}
+.map-status svg{width:min(320px,80%);height:auto}
+.map-hint{position:absolute;inset:0;z-index:500;background:rgba(0,0,0,.5);color:#fff;display:grid;place-items:center;font-weight:700;font-size:18px;opacity:0;pointer-events:none;transition:opacity .2s}
+.map-hint.show{opacity:1}
+.map-note{font-size:14px;color:var(--muted);margin-top:8px}
+.leaflet-container{font:inherit;background:var(--surface-2)}
+@media (max-width:899px){.map-layout{grid-template-columns:1fr}.map-box{min-height:380px}}
+
+/* Facts */
+.fact-day{display:grid;grid-template-columns:auto 1fr;gap:24px;align-items:center;background:var(--surface);border:1px solid var(--border);border-radius:24px;padding:32px;box-shadow:var(--shadow);margin-bottom:16px}
+.fact-day .sun{width:96px;height:96px;border-radius:50%;background:var(--ochre-soft);display:grid;place-items:center;color:var(--ochre)}
+.fact-day .sun svg{width:56px;height:56px}
+.fact-day .lbl{font-size:13px;text-transform:uppercase;letter-spacing:.08em;color:var(--ochre);font-weight:700}
+.fact-day .q{font-family:var(--font-head);font-size:clamp(22px,3vw,30px);margin:4px 0 8px}
+.fact-day .a{font-size:18px;margin:0 0 16px}
+@media (max-width:599px){.fact-day{grid-template-columns:1fr;padding:24px}.fact-day .sun{width:64px;height:64px}}
+.carousel{display:flex;gap:16px;overflow-x:auto;scroll-snap-type:x mandatory;padding:24px 4px 16px;margin:0 -4px}
+.flip{flex:0 0 260px;height:260px;perspective:1000px;scroll-snap-align:start}
+.flip-inner{position:relative;width:100%;height:100%;transition:transform .5s;transform-style:preserve-3d}
+.flip.flipped .flip-inner{transform:rotateY(180deg)}
+.face{position:absolute;inset:0;backface-visibility:hidden;-webkit-backface-visibility:hidden;border-radius:var(--radius);padding:20px;display:flex;flex-direction:column;gap:12px;border:1px solid var(--border);box-shadow:var(--shadow)}
+.face.front{background:var(--sage);color:var(--bg)}
+.face.front p{font-family:var(--font-head);font-size:21px;line-height:1.3;margin:0;flex:1}
+.face.back{background:var(--surface);transform:rotateY(180deg)}
+.face.back p{margin:0;flex:1;overflow:auto;font-size:15px}
+.face .btn{align-self:flex-start;padding:8px 16px;min-height:40px}
+.face.front .btn{background:var(--bg);color:var(--sage)}
+.face .row{display:flex;gap:8px;flex-wrap:wrap}
+
+/* Sources & footer */
+.src-list{padding-left:20px}
+.src-list li{margin-bottom:6px}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-top:24px}
+.two>div{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:24px}
+@media (max-width:699px){.two{grid-template-columns:1fr}}
+footer{background:var(--surface-2);padding:32px 0;font-size:14px;color:var(--muted);border-top:1px solid var(--border)}
+footer .wrap{display:flex;flex-wrap:wrap;gap:8px 32px;justify-content:space-between}
+footer b{color:var(--text)}
+.toast{position:fixed;left:50%;bottom:24px;transform:translateX(-50%) translateY(120px);background:var(--text);color:var(--bg);padding:12px 20px;border-radius:999px;z-index:100;transition:transform .25s;font-weight:600}
+.toast.show{transform:translateX(-50%) translateY(0)}
+
+@media (prefers-reduced-motion: reduce){
+  *,*::before,*::after{transition:none!important;animation:none!important;scroll-behavior:auto!important}
+}
+@media print{
+  body.printing > *:not(#modal){display:none!important}
+  body.printing #modal{position:static;padding:0;display:block}
+  body.printing .bd,body.printing .closem,body.printing .m-actions,body.printing .no-print{display:none!important}
+  body.printing .dialog{box-shadow:none;max-width:none}
+  body.printing details.more>*{display:block}
+  body{background:#fff;color:#000}
+}
+</style>
+</head>
+<body>
+<a class="skip" href="#animals" data-i18n="skip">Перейти к каталогу</a>
+
+<header class="site-header" id="top">
+  <div class="wrap header-inner">
+    <a class="logo" href="#hero" data-nav>
+      <svg viewBox="0 0 40 40" aria-hidden="true"><circle cx="20" cy="20" r="19" fill="var(--sage)"/><circle cx="27" cy="13" r="5" fill="var(--ochre)"/><path d="M3 28c6-4 10-4 15-1s10 3 19-2v4a19 19 0 0 1-34 0z" fill="var(--bg)" opacity=".9"/><path d="M8 20c3-3 6-4 9-2l3-3 1 3c2 0 4 1 5 2l-6 1-4 3-1-3c-2 0-5 0-7-1z" fill="var(--bg)"/></svg>
+      <span data-i18n="site_name">Фауна Прииртышья</span>
+    </a>
+    <nav class="mainnav" id="mainnav" aria-label="Меню">
+      <ul>
+        <li><a href="#nature" data-nav data-i18n="nav_nature">Природа края</a></li>
+        <li><a href="#animals" data-nav data-i18n="nav_animals">Животные</a></li>
+        <li><a href="#redbook" data-nav data-i18n="nav_redbook">Красная книга</a></li>
+        <li><a href="#map" data-nav data-i18n="nav_map">Карта</a></li>
+        <li><a href="#facts" data-nav data-i18n="nav_facts">Факты</a></li>
+        <li><a href="#sources" data-nav data-i18n="nav_sources">Источники</a></li>
+      </ul>
+    </nav>
+    <div class="langs" role="group" aria-label="Язык / Тіл / Language">
+      <button type="button" data-lang="kk" lang="kk">ҚАЗ</button>
+      <button type="button" data-lang="ru" lang="ru">РУС</button>
+      <button type="button" data-lang="en" lang="en">ENG</button>
+    </div>
+    <button class="burger" id="burger" aria-expanded="false" aria-controls="mainnav" data-i18n-aria="menu"><span id="burgerIc"></span></button>
+  </div>
+</header>
+<div class="demo-banner" data-i18n="demo_banner"></div>
+
+<main>
+  <section id="hero" class="hero">
+    <svg class="hero-art" viewBox="0 0 1440 220" preserveAspectRatio="none" aria-hidden="true">
+      <path d="M0 120 L120 96 L190 60 L240 84 L300 40 L360 80 L430 70 L520 110 L700 120 L900 105 L1100 125 L1300 110 L1440 118 V220 H0Z" fill="var(--sage)" opacity=".28"/>
+      <path d="M0 150 Q360 120 720 150 T1440 140 V220 H0Z" fill="var(--ochre)" opacity=".22"/>
+      <path d="M0 186 Q400 160 760 180 T1440 172" fill="none" stroke="var(--sky)" stroke-width="8" opacity=".45"/>
+      <path d="M0 200 Q480 180 900 198 T1440 194 V220 H0Z" fill="var(--bg)"/>
+    </svg>
+    <div class="wrap">
+      <h1 data-i18n="hero_title">Животный мир Павлодарской области</h1>
+      <p class="sub" data-i18n="hero_sub"></p>
+      <form class="searchbox" id="heroSearch" role="search">
+        <label for="heroQ" class="sr" data-i18n="search_label"></label>
+        <span id="heroIc"></span>
+        <input id="heroQ" type="search" autocomplete="off" data-i18n-ph="search_ph">
+        <button class="btn" type="submit" data-i18n="search_btn"></button>
+      </form>
+      <p class="counters" id="counters" aria-live="polite"></p>
+    </div>
+  </section>
+  <div class="ornament" aria-hidden="true"></div>
+
+  <section id="nature">
+    <div class="wrap">
+      <h2 data-i18n="nature_title"></h2>
+      <p class="lead" data-i18n="nature_lead"></p>
+      <div class="zones-grid" id="zonesGrid"></div>
+    </div>
+  </section>
+
+  <section id="animals" style="background:var(--surface-2)">
+    <div class="wrap">
+      <h2 data-i18n="animals_title"></h2>
+      <div class="catalog">
+        <aside class="filters" id="filters" aria-labelledby="fTitle">
+          <div class="fhead">
+            <h3 id="fTitle" data-i18n="filters"></h3>
+            <button class="iconbtn closef" id="closeFilters" data-i18n-aria="close"></button>
+          </div>
+          <div id="filterGroups"></div>
+          <button class="btn ghost" type="button" id="resetAll2" style="width:100%" data-i18n="reset_all"></button>
+        </aside>
+        <div class="backdrop-f" id="backdropF"></div>
+        <div class="results">
+          <div class="toolbar">
+            <div class="searchbox">
+              <label for="q" class="sr" data-i18n="search_label"></label>
+              <span id="qIc"></span>
+              <input id="q" type="search" autocomplete="off" data-i18n-ph="search_ph">
+            </div>
+            <button class="btn ghost filter-toggle" id="filterToggle" aria-controls="filters" aria-expanded="false"></button>
+            <label class="sr" for="sort" data-i18n="sort_label"></label>
+            <select id="sort">
+              <option value="alpha" data-i18n="sort_alpha"></option>
+              <option value="group" data-i18n="sort_group"></option>
+              <option value="red" data-i18n="sort_red"></option>
+            </select>
+          </div>
+          <div class="chips" id="chips"></div>
+          <p class="found" id="found" aria-live="polite"></p>
+          <div class="grid" id="grid"></div>
+          <div class="empty" id="empty" hidden>
+            <p style="font-size:20px;font-weight:700;margin:0 0 16px" data-i18n="nothing"></p>
+            <button class="btn" type="button" id="resetEmpty" data-i18n="reset_filters"></button>
+          </div>
+          <div class="more-wrap"><button class="btn ghost" type="button" id="more" data-i18n="show_more"></button></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="redbook">
+    <div class="wrap">
+      <h2 data-i18n="redbook_title"></h2>
+      <p class="lead" data-i18n="redbook_lead"></p>
+      <h3 data-i18n="cats_title"></h3>
+      <dl class="rb-cats" id="rbCats"></dl>
+      <h3 data-i18n="rb_ribbon"></h3>
+      <div class="ribbon" id="rbRibbon"></div>
+      <div class="rb-help">
+        <div>
+          <h3 data-i18n="help_title"></h3>
+          <ol class="rules" id="rules"></ol>
+        </div>
+        <div class="report">
+          <h3 data-i18n="report_title"></h3>
+          <p data-i18n="report_text"></p>
+          <p style="margin:0"><b data-i18n="report_contacts"></b></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="map" style="background:var(--surface-2)">
+    <div class="wrap">
+      <h2 data-i18n="map_title"></h2>
+      <p class="lead" data-i18n="map_lead"></p>
+      <div class="map-layout">
+        <div class="map-side">
+          <div>
+            <label for="mapSelect" data-i18n="map_select"></label>
+            <select id="mapSelect"></select>
+          </div>
+          <div class="legend" id="zoneLegend" role="group"></div>
+          <div class="zone-list" id="zoneList" aria-live="polite"></div>
+        </div>
+        <div>
+          <div class="map-box">
+            <div class="map-status" id="mapStatus"></div>
+            <div id="mapEl" aria-label="Карта" role="region"></div>
+            <div class="map-hint" id="mapHint" data-i18n="map_two_fingers"></div>
+          </div>
+          <p class="map-note" data-i18n="map_note"></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="facts">
+    <div class="wrap">
+      <h2 data-i18n="facts_title"></h2>
+      <div class="fact-day" id="factDay"></div>
+      <div class="carousel" id="factCarousel"></div>
+    </div>
+  </section>
+  <div class="ornament" aria-hidden="true"></div>
+
+  <section id="sources">
+    <div class="wrap">
+      <h2 data-i18n="sources_title"></h2>
+      <p class="lead" data-i18n="sources_lead"></p>
+      <ul class="src-list" id="srcList"></ul>
+      <div class="two">
+        <div><h3 data-i18n="licenses_title"></h3><p data-i18n="licenses_text" style="margin:0"></p></div>
+        <div><h3 data-i18n="errors_title"></h3><p data-i18n="errors_text"></p><p style="margin:0"><b>[email@example.kz]</b></p></div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div><b data-i18n="site_name"></b><br><span data-i18n="footer_license"></span></div>
+    <div>© 2026 [автор / организация] · [контакты] · <a href="#top" data-nav data-i18n="to_top"></a></div>
+  </div>
+</footer>
+
+<div class="modal" id="modal" hidden>
+  <div class="bd" id="modalBd"></div>
+  <div class="dialog" role="dialog" aria-modal="true" aria-labelledby="mTitle" tabindex="-1" id="dialog">
+    <button class="iconbtn closem" id="closeModal" data-i18n-aria="close"></button>
+    <div id="mBody"></div>
+  </div>
+</div>
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+<script>
+"use strict";
+/* ================= ДАННЫЕ (в проекте — /data/*.json, /i18n/*.json) ================= */
+
+const I18N = {
+  ru: {
+    skip:"Перейти к каталогу", menu:"Меню", site_name:"Фауна Прииртышья",
+    page_title:"Животный мир Павлодарской области — Фауна Прииртышья",
+    page_desc:"Каталог диких и домашних животных Павлодарской области: Красная книга, карта природных зон, интересные факты.",
+    nav_nature:"Природа края", nav_animals:"Животные", nav_redbook:"Красная книга", nav_map:"Карта", nav_facts:"Факты", nav_sources:"Источники",
+    demo_banner:"Демо-версия: записи не проверены экспертом-биологом, статусы и цифры требуют сверки.",
+    hero_title:"Животный мир Павлодарской области",
+    hero_sub:"От степного орла до байбака — познакомьтесь с соседями по Прииртышью",
+    search_label:"Поиск животного", search_ph:"Например: орёл, байбак, Ovis ammon…", search_btn:"Найти",
+    cnt_species:"видов", cnt_redbook:"в Красной книге", cnt_zones:"природных зон",
+    nature_title:"Природа края",
+    nature_lead:"Павлодарская область — это степь, долина Иртыша, гранитные горы Баянаула и сотни озёр. Нажмите на зону, чтобы увидеть её обитателей.",
+    zone_typical:"Типичные обитатели:", zone_show:"Показать животных →",
+    animals_title:"Каталог животных", filters:"Фильтры", f_status:"Статус", f_group:"Группа", f_diet:"Питание", f_zone:"Место обитания",
+    reset_all:"Сбросить всё", found:"Найдено: ", sort_label:"Сортировка", sort_alpha:"По алфавиту", sort_group:"По группе", sort_red:"Сначала Красная книга",
+    show_more:"Показать ещё", nothing:"Ничего не найдено", reset_filters:"Сбросить фильтры", close:"Закрыть", remove:"Убрать фильтр",
+    names:"Названия", n_kk:"Казахское", n_ru:"Русское", n_en:"Английское", n_lat:"Латинское",
+    short:"Коротко", more:"Подробнее", conservation:"Охранный статус", redbook_kz:"Красная книга РК", iucn:"МСОП (IUCN)",
+    not_listed:"Не включён", no_data:"Нет данных",
+    habitat:"Где живёт в области", did_you_know:"А вы знали?", how_help:"Как помочь", sources:"Источники",
+    share:"Поделиться", print:"Распечатать", show_on_map:"Показать на карте", copied:"Ссылка скопирована",
+    translating:"Перевод готовится", photo_wanted:"Фото ищем — поделитесь своим", todo_check:"TODO: проверить",
+    not_verified:"Запись не проверена научным консультантом (verified: false).",
+    photo_todo:"Нужно фото на Wikimedia Commons: ",
+    redbook_title:"Красная книга",
+    redbook_lead:"Красная книга Республики Казахстан — официальный список редких и исчезающих видов. Охота на них, отлов и торговля ими запрещены законом. Включение вида означает, что без защиты он может исчезнуть.",
+    cats_title:"Категории Красной книги РК", rb_ribbon:"Краснокнижные виды области",
+    rb_cats_note:"Сверить формулировки с действующей редакцией.",
+    cat:["I — находящиеся под угрозой исчезновения","II — сокращающиеся в численности","III — редкие","IV — неопределённые (мало изучены)","V — восстановленные"],
+    help_title:"Как помочь редким животным",
+    rules:["Не подходите к гнёздам и норам, не трогайте птенцов и детёнышей.","Держите собак на поводке в степи и в бору.","Не разводите костры и не жгите сухую траву: весенние палы губят гнёзда на земле.","Не покупайте диких птиц и животных, их чучела и части.","Увозите мусор с собой: леска и пакеты калечат птиц.","Сообщайте о браконьерстве и раненых животных."],
+    report_title:"Куда сообщить", report_text:"О браконьерстве, раненом или попавшем в беду животном сообщите в областную территориальную инспекцию лесного хозяйства и животного мира.",
+    report_contacts:"[контакты инспекции / телефон доверия]",
+    map_title:"Карта природных зон",
+    map_lead:"Выберите животное, чтобы подсветить зоны, где оно обитает, или нажмите на зону, чтобы увидеть её жителей.",
+    map_select:"Животное", map_all:"— все зоны —", map_zone_species:"Обитают в зоне «{z}»:", map_pick_zone:"Нажмите на зону на карте или в списке.",
+    map_layers_zones:"Природные зоны", map_layers_oopt:"ООПТ", map_two_fingers:"Используйте два пальца, чтобы двигать карту",
+    map_loading:"Карта загружается…", map_fail:"Не удалось загрузить интерактивную карту. Ниже — схема зон, каталог работает как обычно.",
+    map_note:"Границы зон показаны схематично. Точные места обитания редких видов не публикуются, чтобы не помогать браконьерам.",
+    facts_title:"Интересные факты", fact_of_day:"Факт дня", another_fact:"Ещё факт", answer:"Узнать ответ", back:"Назад", to_species:"О виде",
+    sources_title:"Источники и авторам",
+    sources_lead:"Тексты написаны своими словами на основе открытых источников. Каждая запись проходит проверку научным консультантом.",
+    licenses_title:"Лицензии", licenses_text:"Фото — только со свободными лицензиями (CC0, Public Domain, CC BY, CC BY-SA) с указанием автора и ссылки на оригинал. Тексты сайта — CC BY-SA 4.0, если не указано иное.",
+    errors_title:"Нашли неточность?", errors_text:"Учёным, педагогам и журналистам: напишите нам — мы исправим и укажем вас в благодарностях.",
+    footer_license:"Материалы сайта распространяются по лицензии CC BY-SA 4.0, если не указано иное.", to_top:"Наверх",
+    filters_btn:"Фильтры"
+  },
+  kk: {
+    skip:"Каталогқа өту", menu:"Мәзір", site_name:"Ертіс өңірінің фаунасы",
+    page_title:"Павлодар облысының жануарлар әлемі — Ертіс өңірінің фаунасы",
+    page_desc:"Павлодар облысының жабайы және үй жануарларының каталогы: Қызыл кітап, табиғи аймақтар картасы, қызықты деректер.",
+    nav_nature:"Өлке табиғаты", nav_animals:"Жануарлар", nav_redbook:"Қызыл кітап", nav_map:"Карта", nav_facts:"Деректер", nav_sources:"Дереккөздер",
+    demo_banner:"Демо-нұсқа: жазбаларды биолог-сарапшы әлі тексерген жоқ.",
+    hero_title:"Павлодар облысының жануарлар әлемі",
+    hero_sub:"Дала қыранынан суырға дейін — Ертіс өңіріндегі көршілеріңізбен танысыңыз",
+    search_label:"Жануарды іздеу", search_ph:"Мысалы: бүркіт, суыр, Ovis ammon…", search_btn:"Іздеу",
+    cnt_species:"түр", cnt_redbook:"Қызыл кітапта", cnt_zones:"табиғи аймақ",
+    nature_title:"Өлке табиғаты",
+    nature_lead:"Павлодар облысы — дала, Ертіс аңғары, Баянауылдың гранит таулары және жүздеген көл. Тұрғындарын көру үшін аймақты басыңыз.",
+    zone_typical:"Тән тұрғындары:", zone_show:"Жануарларды көрсету →",
+    animals_title:"Жануарлар каталогы", filters:"Сүзгілер", f_status:"Мәртебесі", f_group:"Тобы", f_diet:"Қоректенуі", f_zone:"Мекендейтін жері",
+    reset_all:"Барлығын тазалау", found:"Табылды: ", sort_label:"Сұрыптау", sort_alpha:"Әліпби бойынша", sort_group:"Топ бойынша", sort_red:"Алдымен Қызыл кітап",
+    show_more:"Тағы көрсету", nothing:"Ештеңе табылмады", reset_filters:"Сүзгілерді тазалау", close:"Жабу", remove:"Сүзгіні алып тастау",
+    names:"Атаулары", n_kk:"Қазақша", n_ru:"Орысша", n_en:"Ағылшынша", n_lat:"Латынша",
+    short:"Қысқаша", more:"Толығырақ", conservation:"Қорғау мәртебесі", redbook_kz:"ҚР Қызыл кітабы", iucn:"ХТҚО (IUCN)",
+    not_listed:"Енгізілмеген", no_data:"Дерек жоқ",
+    habitat:"Облыста қай жерде тіршілік етеді", did_you_know:"Білесіз бе?", how_help:"Қалай көмектесуге болады", sources:"Дереккөздер",
+    share:"Бөлісу", print:"Басып шығару", show_on_map:"Картада көрсету", copied:"Сілтеме көшірілді",
+    translating:"Аудармасы дайындалуда", photo_wanted:"Фото іздеп жатырмыз — өзіңіздікімен бөлісіңіз", todo_check:"TODO: тексеру",
+    not_verified:"Жазбаны ғылыми кеңесші әлі тексерген жоқ (verified: false).",
+    photo_todo:"Wikimedia Commons-тан фото керек: ",
+    redbook_title:"Қызыл кітап",
+    redbook_lead:"Қазақстан Республикасының Қызыл кітабы — сирек және жойылып бара жатқан түрлердің ресми тізімі. Оларды аулауға, ұстауға және сатуға заңмен тыйым салынған.",
+    cats_title:"ҚР Қызыл кітабының санаттары", rb_ribbon:"Облыстың Қызыл кітапқа енген түрлері",
+    rb_cats_note:"Тұжырымдарды қолданыстағы басылыммен салыстыру керек.",
+    cat:["I — жойылып кету қаупі төнген","II — саны азайып бара жатқан","III — сирек","IV — анықталмаған (аз зерттелген)","V — қалпына келтірілген"],
+    help_title:"Сирек жануарларға қалай көмектесуге болады",
+    rules:["Ұяларға және індерге жақындамаңыз, балапандарды ұстамаңыз.","Далада және орманда иттерді бауымен ұстаңыз.","Құрғақ шөпті өртемеңіз: көктемгі өрт жердегі ұяларды жояды.","Жабайы құстар мен аңдарды, олардың тұлыптарын сатып алмаңыз.","Қоқысты өзіңізбен алып кетіңіз.","Браконьерлік және жараланған жануарлар туралы хабарлаңыз."],
+    report_title:"Қайда хабарлау керек", report_text:"Браконьерлік немесе жараланған жануар туралы облыстық орман шаруашылығы және жануарлар дүниесі аумақтық инспекциясына хабарлаңыз.",
+    report_contacts:"[инспекция байланыстары / сенім телефоны]",
+    map_title:"Табиғи аймақтар картасы",
+    map_lead:"Жануар мекендейтін аймақтарды көру үшін оны таңдаңыз немесе тұрғындарын көру үшін аймақты басыңыз.",
+    map_select:"Жануар", map_all:"— барлық аймақтар —", map_zone_species:"«{z}» аймағында тіршілік етеді:", map_pick_zone:"Картадағы немесе тізімдегі аймақты басыңыз.",
+    map_layers_zones:"Табиғи аймақтар", map_layers_oopt:"ЕҚТА", map_two_fingers:"Картаны жылжыту үшін екі саусақты қолданыңыз",
+    map_loading:"Карта жүктелуде…", map_fail:"Интерактивті картаны жүктеу мүмкін болмады. Төменде — аймақтар сызбасы.",
+    map_note:"Аймақ шекаралары шартты түрде көрсетілген. Сирек түрлердің нақты мекендері браконьерлерге көмектеспеу үшін жарияланбайды.",
+    facts_title:"Қызықты деректер", fact_of_day:"Күн дерегі", another_fact:"Тағы бір дерек", answer:"Жауабын білу", back:"Артқа", to_species:"Түр туралы",
+    sources_title:"Дереккөздер және авторларға",
+    sources_lead:"Мәтіндер ашық дереккөздер негізінде өз сөзімізбен жазылған. Әр жазбаны ғылыми кеңесші тексереді.",
+    licenses_title:"Лицензиялар", licenses_text:"Фотолар тек еркін лицензиялармен (CC0, Public Domain, CC BY, CC BY-SA), авторы мен түпнұсқа сілтемесі көрсетіліп жарияланады. Сайт мәтіндері — CC BY-SA 4.0.",
+    errors_title:"Қате таптыңыз ба?", errors_text:"Ғалымдар, педагогтар мен журналистер: бізге жазыңыз — түзетеміз.",
+    footer_license:"Сайт материалдары, басқасы көрсетілмесе, CC BY-SA 4.0 лицензиясымен таратылады.", to_top:"Жоғары",
+    filters_btn:"Сүзгілер"
+  },
+  en: {
+    skip:"Skip to catalogue", menu:"Menu", site_name:"Irtysh Wildlife",
+    page_title:"Wildlife of Pavlodar Region — Irtysh Wildlife",
+    page_desc:"A catalogue of wild and domestic animals of Pavlodar Region, Kazakhstan: Red Data Book, habitat map and fun facts.",
+    nav_nature:"Nature", nav_animals:"Animals", nav_redbook:"Red Book", nav_map:"Map", nav_facts:"Facts", nav_sources:"Sources",
+    demo_banner:"Demo version: entries have not been reviewed by a biologist yet; statuses and figures need checking.",
+    hero_title:"Wildlife of Pavlodar Region",
+    hero_sub:"From the steppe eagle to the bobak marmot — meet your neighbours along the Irtysh",
+    search_label:"Search for an animal", search_ph:"e.g. eagle, marmot, Ovis ammon…", search_btn:"Search",
+    cnt_species:"species", cnt_redbook:"in the Red Book", cnt_zones:"natural zones",
+    nature_title:"Nature of the region",
+    nature_lead:"Pavlodar Region is steppe, the Irtysh valley, the granite hills of Bayanaul and hundreds of lakes. Tap a zone to see who lives there.",
+    zone_typical:"Typical residents:", zone_show:"Show animals →",
+    animals_title:"Animal catalogue", filters:"Filters", f_status:"Status", f_group:"Group", f_diet:"Diet", f_zone:"Habitat",
+    reset_all:"Clear all", found:"Found: ", sort_label:"Sort", sort_alpha:"A–Z", sort_group:"By group", sort_red:"Red Book first",
+    show_more:"Show more", nothing:"Nothing found", reset_filters:"Clear filters", close:"Close", remove:"Remove filter",
+    names:"Names", n_kk:"Kazakh", n_ru:"Russian", n_en:"English", n_lat:"Latin",
+    short:"In short", more:"More details", conservation:"Conservation status", redbook_kz:"Red Book of Kazakhstan", iucn:"IUCN",
+    not_listed:"Not listed", no_data:"No data",
+    habitat:"Where it lives in the region", did_you_know:"Did you know?", how_help:"How to help", sources:"Sources",
+    share:"Share", print:"Print", show_on_map:"Show on map", copied:"Link copied",
+    translating:"Translation in progress", photo_wanted:"Photo wanted — share yours", todo_check:"TODO: verify",
+    not_verified:"This entry has not been reviewed by the scientific consultant (verified: false).",
+    photo_todo:"Photo needed from Wikimedia Commons: ",
+    redbook_title:"Red Book",
+    redbook_lead:"The Red Data Book of the Republic of Kazakhstan is the official list of rare and endangered species. Hunting, capturing and trading them is prohibited by law.",
+    cats_title:"Red Book of Kazakhstan categories", rb_ribbon:"Red Book species of the region",
+    rb_cats_note:"Check wording against the current edition.",
+    cat:["I — threatened with extinction","II — declining","III — rare","IV — indeterminate (poorly studied)","V — recovered"],
+    help_title:"How to help rare animals",
+    rules:["Keep away from nests and burrows; never touch chicks or young.","Keep dogs on a leash in the steppe and forest.","Never burn dry grass: spring fires destroy ground nests.","Do not buy wild birds or animals, stuffed specimens or parts.","Take your litter home: fishing line and bags injure birds.","Report poaching and injured animals."],
+    report_title:"Where to report", report_text:"Report poaching or an injured animal to the regional inspectorate for forestry and wildlife.",
+    report_contacts:"[inspectorate contacts / hotline]",
+    map_title:"Natural zones map",
+    map_lead:"Pick an animal to highlight the zones where it lives, or tap a zone to see its residents.",
+    map_select:"Animal", map_all:"— all zones —", map_zone_species:"Living in “{z}”:", map_pick_zone:"Tap a zone on the map or in the list.",
+    map_layers_zones:"Natural zones", map_layers_oopt:"Protected areas", map_two_fingers:"Use two fingers to move the map",
+    map_loading:"Loading map…", map_fail:"The interactive map could not be loaded. Below is a zone diagram; the catalogue works as usual.",
+    map_note:"Zone borders are schematic. Exact locations of rare species are never published, so as not to help poachers.",
+    facts_title:"Fun facts", fact_of_day:"Fact of the day", another_fact:"Another fact", answer:"Reveal answer", back:"Back", to_species:"About the species",
+    sources_title:"Sources & contributors",
+    sources_lead:"Texts are written in our own words from open sources. Every entry is reviewed by a scientific consultant.",
+    licenses_title:"Licences", licenses_text:"Photos are used only under free licences (CC0, Public Domain, CC BY, CC BY-SA) with author and a link to the original. Site texts are CC BY-SA 4.0 unless stated otherwise.",
+    errors_title:"Spotted an error?", errors_text:"Scientists, teachers and journalists: write to us and we will fix it.",
+    footer_license:"Site content is available under CC BY-SA 4.0 unless stated otherwise.", to_top:"Back to top",
+    filters_btn:"Filters"
+  }
+};
+
+const CATS = {
+  status: {
+    redbook:{ru:"Красная книга",kk:"Қызыл кітап",en:"Red Book"},
+    wild:{ru:"Дикие",kk:"Жабайы",en:"Wild"},
+    neighbor:{ru:"Соседи",kk:"Көршілер",en:"Neighbours"},
+    domestic:{ru:"Домашние",kk:"Үй жануарлары",en:"Domestic"}
+  },
+  group: {
+    mammals:{ru:"Млекопитающие",kk:"Сүтқоректілер",en:"Mammals"},
+    birds:{ru:"Птицы",kk:"Құстар",en:"Birds"},
+    fish:{ru:"Рыбы",kk:"Балықтар",en:"Fish"},
+    reptiles:{ru:"Пресмыкающиеся",kk:"Бауырымен жорғалаушылар",en:"Reptiles"},
+    amphibians:{ru:"Земноводные",kk:"Қосмекенділер",en:"Amphibians"},
+    insects:{ru:"Насекомые",kk:"Жәндіктер",en:"Insects"}
+  },
+  diet: {
+    carnivore:{ru:"Хищники",kk:"Жыртқыштар",en:"Carnivores"},
+    herbivore:{ru:"Травоядные",kk:"Шөпқоректілер",en:"Herbivores"},
+    omnivore:{ru:"Всеядные",kk:"Барлығын жейтіндер",en:"Omnivores"},
+    insectivore:{ru:"Насекомоядные",kk:"Жәндікқоректілер",en:"Insectivores"}
+  }
+};
+
+const ZONES = [
+  {id:"steppe", color:"#c9a24a",
+   name:{ru:"Степь",kk:"Дала",en:"Steppe"},
+   text:{ru:"Ковыльно-полынные равнины занимают большую часть области. Лето жаркое и сухое, зима ветреная и морозная.",kk:"Бозды-жусанды жазықтар облыстың басым бөлігін алып жатыр. Жазы ыстық әрі құрғақ, қысы желді әрі аязды.",en:"Feather-grass and wormwood plains cover most of the region. Summers are hot and dry, winters windy and frosty."}},
+  {id:"floodplain", color:"#6e9f55",
+   name:{ru:"Пойма Иртыша",kk:"Ертіс жайылмасы",en:"Irtysh floodplain"},
+   text:{ru:"Луга, протоки, старицы и пойменные леса вдоль Иртыша — зелёный коридор посреди степи.",kk:"Ертіс бойындағы шалғындар, саға-салалар мен жайылма ормандары — дала ортасындағы жасыл дәліз.",en:"Meadows, channels, oxbow lakes and riverside woods along the Irtysh — a green corridor through the steppe."}},
+  {id:"bayanaul", color:"#2f6b4f",
+   name:{ru:"Баянаульский национальный парк",kk:"Баянауыл ұлттық паркі",en:"Bayanaul National Park"},
+   text:{ru:"Гранитные скалы, сосновые боры и горные озёра на юго-западе области. Первый национальный парк Казахстана (1985).",kk:"Облыстың оңтүстік-батысындағы гранит жартастар, қарағайлы ормандар мен тау көлдері. Қазақстандағы алғашқы ұлттық парк (1985).",en:"Granite rocks, pine forests and mountain lakes in the south-west. Kazakhstan’s first national park (1985)."}},
+  {id:"lakes", color:"#3f7fa6",
+   name:{ru:"Озёра и водно-болотные угодья",kk:"Көлдер мен сулы-батпақты алқаптар",en:"Lakes & wetlands"},
+   text:{ru:"Пресные и солёные озёра с тростниками — места гнездования и остановки перелётных птиц.",kk:"Қамысты тұщы және ащы көлдер — құстардың ұя салатын және қоныс аударғанда тоқтайтын жерлері.",en:"Fresh and salt lakes with reed beds — nesting and stop-over sites for migratory birds."}},
+  {id:"settlements", color:"#9a6b4a",
+   name:{ru:"Населённые пункты",kk:"Елді мекендер",en:"Towns & villages"},
+   text:{ru:"Города и сёла, парки и дачи. Здесь живут «соседи» — животные, привыкшие к человеку.",kk:"Қалалар мен ауылдар, саябақтар мен саяжайлар. Мұнда адамға үйренген «көршілер» тұрады.",en:"Towns, villages, parks and gardens — home to the “neighbours” that have adapted to people."}}
+];
+
+/* Обобщённые (схематичные!) полигоны [lat, lng]. Точные места обитания редких видов не публикуются. */
+const REGION = [[54.05,73.55],[54.1,75.2],[53.75,76.3],[53.55,77.7],[53.1,78.4],[52.6,79.2],[52.05,78.9],[51.55,78.4],[51.05,77.8],[50.75,77.0],[50.45,75.9],[50.55,74.6],[51.1,73.9],[51.8,73.6],[52.6,73.4],[53.4,73.3]];
+const IRTYSH = [[51.1,77.9],[51.45,77.55],[51.85,77.2],[52.05,77.0],[52.3,76.95],[52.6,76.7],[52.95,76.15],[53.33,75.45],[53.7,75.0],[54.06,74.85]];
+function circlePoly(lat,lng,r){const p=[];for(let i=0;i<16;i++){const a=i/16*Math.PI*2;p.push([lat+r*Math.sin(a),lng+r*1.6*Math.cos(a)]);}return p;}
+const GEO = {
+  steppe:[REGION],
+  floodplain:[IRTYSH.map(([a,b])=>[a,b-0.16]).concat(IRTYSH.slice().reverse().map(([a,b])=>[a,b+0.16]))],
+  bayanaul:[[[50.97,75.42],[51.0,75.85],[50.86,76.08],[50.68,75.98],[50.6,75.62],[50.74,75.38]]],
+  lakes:[circlePoly(52.75,77.95,0.11),circlePoly(53.2,77.2,0.09),circlePoly(52.15,75.7,0.1),circlePoly(51.6,76.35,0.08),circlePoly(53.55,76.35,0.08)],
+  settlements:[circlePoly(52.29,76.97,0.06),circlePoly(51.73,75.32,0.05),circlePoly(52.04,76.92,0.035)]
+};
+const OOPT = [{name:{ru:"Баянаульский национальный парк",kk:"Баянауыл ұлттық паркі",en:"Bayanaul National Park"},poly:GEO.bayanaul[0]}];
+
+const ANIMALS = [
+ {id:"argali", name:{kk:"Арқар",ru:"Архар",en:"Argali"}, synonyms:{ru:["горный баран","аргали"],en:["wild sheep"]},
+  latin:"Ovis ammon", group:"mammals", diet:"herbivore", status:["redbook","wild"], redbook_kz:"", iucn:"NT", zones:["bayanaul"],
+  short:{ru:"Архар — самый крупный дикий баран на Земле. У самцов огромные закрученные рога. В нашей области он живёт среди скал Баянаула.",
+         kk:"Арқар — жер бетіндегі ең ірі жабайы қой. Еркектерінің мүйіздері үлкен әрі иірілген. Біздің облыста ол Баянауыл жартастарында мекендейді.",
+         en:"The argali is the largest wild sheep on Earth. Males have huge curled horns. In our region it lives among the rocks of Bayanaul."},
+  description:{ru:"Крупный горный баран со светлым «зеркалом» на крупе. Держится небольшими группами на скалистых склонах и в мелкосопочнике, питается травами и кустарничками. Основные угрозы — браконьерство, беспокойство и конкуренция с домашним скотом за пастбища.",
+               en:"A large mountain sheep with a pale rump patch. Lives in small groups on rocky slopes and low hills, feeding on grasses and dwarf shrubs. Main threats are poaching, disturbance and competition with livestock for pasture."},
+  how_to_help:{ru:"Не подходите к животным на скалах и не запускайте рядом дроны. Сообщайте о браконьерах в инспекцию.",kk:"Жартастағы жануарларға жақындамаңыз, жанына дрон ұшырмаңыз. Браконьерлер туралы инспекцияға хабарлаңыз.",en:"Keep your distance and never fly drones near the herds. Report poachers to the inspectorate."},
+  facts:["f_argali"], photoTodo:"Ovis ammon collium, Казахстан", wiki:"Архар"},
+ {id:"saker", name:{kk:"Ителгі",ru:"Балобан",en:"Saker falcon"}, synonyms:{ru:["сокол"]},
+  latin:"Falco cherrug", group:"birds", diet:"carnivore", status:["redbook","wild"], redbook_kz:"", iucn:"EN", zones:["steppe","bayanaul"],
+  short:{ru:"Балобан — крупный степной сокол. Он охотится на сусликов, стремительно бросаясь на них с высоты.",kk:"Ителгі — даланың ірі сұңқары. Ол биіктен құйындай түсіп, саршұнақтарды аулайды.",en:"The saker is a large steppe falcon. It hunts ground squirrels, swooping down on them from above."},
+  description:{ru:"Сокол с бурой спиной и светлой пёстрой грудью. Гнездится на скалах, деревьях и опорах ЛЭП. Численность сократилась из-за незаконного отлова для соколиной охоты и гибели птиц на линиях электропередачи.",
+               en:"A falcon with a brown back and pale streaked breast. Nests on cliffs, trees and pylons. Numbers have fallen due to illegal trapping for falconry and electrocution on power lines."},
+  how_to_help:{ru:"Никогда не покупайте и не держите диких соколов. Если нашли погибшую птицу под ЛЭП — сообщите в инспекцию.",en:"Never buy or keep wild falcons. If you find a dead bird under a power line, report it."},
+  facts:["f_saker"], photoTodo:"Falco cherrug в полёте", wiki:"Балобан"},
+ {id:"steppe-eagle", name:{kk:"Дала қыраны",ru:"Степной орёл",en:"Steppe eagle"}, synonyms:{},
+  latin:"Aquila nipalensis", group:"birds", diet:"carnivore", status:["redbook","wild"], redbook_kz:"", iucn:"EN", zones:["steppe"],
+  short:{ru:"Степной орёл — символ наших степей. Он часто строит гнездо прямо на земле.",kk:"Дала қыраны — біздің даламыздың нышаны. Ол көбіне ұясын тікелей жерге салады.",en:"The steppe eagle is a symbol of our steppes. It often builds its nest right on the ground."},
+  description:{ru:"Крупный тёмно-бурый орёл. Питается в основном сусликами и другими грызунами. Гнёзда на земле страдают от степных пожаров и выпаса; много птиц гибнет на опорах ЛЭП.",
+               en:"A large dark-brown eagle feeding mainly on ground squirrels and other rodents. Ground nests suffer from steppe fires and grazing; many birds die on power-line poles."},
+  how_to_help:{ru:"Не поджигайте сухую траву и не подходите к гнёздам на земле весной и летом.",en:"Never set fire to dry grass and stay away from ground nests in spring and summer."},
+  facts:["f_steppe_eagle"], photoTodo:"Aquila nipalensis, Казахстан", wiki:"Степной_орёл"},
+ {id:"golden-eagle", name:{kk:"Бүркіт",ru:"Беркут",en:"Golden eagle"}, synonyms:{},
+  latin:"Aquila chrysaetos", group:"birds", diet:"carnivore", status:["redbook","wild"], redbook_kz:"", iucn:"LC", zones:["bayanaul","steppe"],
+  short:{ru:"Беркут — один из самых сильных орлов. Казахские охотники-беркутчи веками приручают этих птиц.",kk:"Бүркіт — ең күшті қырандардың бірі. Қазақ бүркітшілері ғасырлар бойы бұл құсты қолға үйретіп келеді.",en:"The golden eagle is one of the most powerful eagles. Kazakh eagle hunters have trained them for centuries."},
+  description:{ru:"Очень крупный орёл с золотистым затылком. Охотится на зайцев, сурков, лисиц. Гнездится на скалах и высоких деревьях. Угрозы — беспокойство у гнёзд, браконьерство, гибель на ЛЭП.",
+               en:"A very large eagle with a golden nape. Hunts hares, marmots and foxes. Nests on cliffs and tall trees. Threats include nest disturbance, poaching and power lines."},
+  how_to_help:{ru:"Не беспокойте птиц у гнёзд на скалах Баянаула, не выкладывайте фото гнёзд с геометками.",en:"Do not disturb nests on the Bayanaul cliffs and never post nest photos with geotags."},
+  facts:["f_golden"], photoTodo:"Aquila chrysaetos, Казахстан", wiki:"Беркут"},
+ {id:"demoiselle-crane", name:{kk:"Қарқылдақ тырна",ru:"Журавль-красавка",en:"Demoiselle crane"}, synonyms:{ru:["красавка"]},
+  latin:"Grus virgo", group:"birds", diet:"omnivore", status:["redbook","wild"], redbook_kz:"", iucn:"LC", zones:["steppe","lakes"],
+  short:{ru:"Красавка — самый маленький журавль в мире. Весной эти птицы красиво танцуют в степи.",kk:"Қарқылдақ тырна — әлемдегі ең кішкентай тырна. Көктемде олар далада әдемі билейді.",en:"The demoiselle is the smallest crane in the world. In spring these birds dance beautifully in the steppe."},
+  description:{ru:"Серый журавль с чёрной шеей и белыми пучками перьев за глазами. Гнездится на земле в степи недалеко от воды, зимует в Южной Азии и Африке. Угрозы — распашка степей и беспокойство гнёзд.",
+               en:"A grey crane with a black neck and white tufts behind the eyes. Nests on the ground near water and winters in South Asia and Africa. Threats are steppe ploughing and nest disturbance."},
+  how_to_help:{ru:"Объезжайте пары журавлей стороной: птицы могут бросить гнездо.",en:"Give crane pairs a wide berth: they may abandon their nest."},
+  facts:["f_crane"], photoTodo:"Grus virgo, степь", wiki:"Журавль-красавка"},
+ {id:"great-bustard", name:{kk:"Дуадақ",ru:"Дрофа",en:"Great bustard"}, synonyms:{},
+  latin:"Otis tarda", group:"birds", diet:"omnivore", status:["redbook","wild"], redbook_kz:"", iucn:"VU", zones:["steppe"],
+  short:{ru:"Дрофа — одна из самых тяжёлых летающих птиц. Она очень осторожна и живёт в открытой степи.",kk:"Дуадақ — ең ауыр ұшатын құстардың бірі. Ол өте сақ және ашық далада тіршілік етеді.",en:"The great bustard is one of the heaviest flying birds. It is very wary and lives in open steppe."},
+  description:{ru:"Крупная птица с рыжей пёстрой спиной и серой головой; самцы заметно крупнее самок. Питается растениями, насекомыми и мелкими животными. Очень чувствительна к распашке степей и беспокойству.",
+               en:"A large bird with a rufous barred back and grey head; males are much larger than females. Eats plants, insects and small animals. Very sensitive to ploughing and disturbance."},
+  how_to_help:{ru:"Не преследуйте птиц на машинах и мотоциклах. Сообщайте о встречах дроф учёным.",en:"Never chase bustards with vehicles. Report sightings to researchers."},
+  facts:["f_bustard"], photoTodo:"Otis tarda, самец", wiki:"Дрофа"},
+ {id:"dalmatian-pelican", name:{kk:"Бұйра бірқазан",ru:"Кудрявый пеликан",en:"Dalmatian pelican"}, synonyms:{ru:["пеликан"]},
+  latin:"Pelecanus crispus", group:"birds", diet:"carnivore", status:["redbook","wild"], redbook_kz:"", iucn:"NT", zones:["lakes","floodplain"],
+  short:{ru:"Кудрявый пеликан — огромная белая птица с кожаным мешком под клювом. Этим мешком он ловит рыбу.",kk:"Бұйра бірқазан — тұмсығының астында терілі қапшығы бар үлкен ақ құс. Сол қапшықпен балық аулайды.",en:"The Dalmatian pelican is a huge white bird with a skin pouch under its bill, which it uses to catch fish."},
+  description:{ru:"Один из крупнейших пресноводных птиц мира. Гнездится колониями на озёрах с зарослями тростника. Угрозы — беспокойство колоний, пожары в тростниках, гибель в рыболовных сетях.",
+               en:"One of the largest freshwater birds in the world. Nests in colonies on lakes with reed beds. Threats include colony disturbance, reed fires and fishing nets."},
+  how_to_help:{ru:"Не подплывайте к колониям на лодках, не оставляйте сети и леску.",en:"Do not approach colonies by boat; never leave nets or fishing line behind."},
+  facts:["f_pelican"], photoTodo:"Pelecanus crispus на озере", wiki:"Кудрявый_пеликан"},
+ {id:"sociable-lapwing", name:{kk:"Безгелдек",ru:"Кречётка",en:"Sociable lapwing"}, synonyms:{},
+  latin:"Vanellus gregarius", group:"birds", diet:"insectivore", status:["redbook","wild"], redbook_kz:"", iucn:"CR", zones:["steppe"],
+  short:{ru:"Кречётка — редкий степной кулик. Она гнездится почти только в степях Казахстана и России.",kk:"Безгелдек — сирек кездесетін дала шалшықшысы. Ол тек дерлік Қазақстан мен Ресей далаларында ұя салады.",en:"The sociable lapwing is a rare steppe wader that breeds almost only in the steppes of Kazakhstan and Russia."},
+  description:{ru:"Небольшой кулик с чёрной «шапочкой» и белой бровью. Гнездится на выпасах с низкой травой, питается насекомыми. Вид на грани исчезновения; главные угрозы — на пролётных путях и в местах зимовки.",
+               en:"A small wader with a black cap and white eyebrow. Breeds on short-grass pastures and feeds on insects. Critically endangered, mainly due to threats along migration routes and in wintering areas."},
+  how_to_help:{ru:"Сообщайте о встречах кречёток орнитологам — каждая пара важна.",en:"Report sociable lapwing sightings to ornithologists — every pair matters."},
+  facts:["f_lapwing"], photoTodo:"Vanellus gregarius, Казахстан", wiki:"Кречётка"},
+ {id:"wolf", name:{kk:"Қасқыр",ru:"Волк",en:"Grey wolf"}, synonyms:{ru:["серый волк"],kk:["бөрі"],en:["wolf"]},
+  latin:"Canis lupus", group:"mammals", diet:"carnivore", status:["wild"], redbook_kz:"", iucn:"LC", zones:["steppe","floodplain","bayanaul"],
+  short:{ru:"Волк — крупный хищник, который живёт и охотится стаей. Он помогает природе, отлавливая больных и слабых животных.",kk:"Қасқыр — үйірімен тіршілік етіп, аң аулайтын ірі жыртқыш.",en:"The wolf is a large predator that lives and hunts in packs, often taking sick and weak animals."},
+  description:{ru:"Самый крупный дикий представитель семейства псовых в области. Семейные стаи занимают большие участки. Охотится на копытных и грызунов, иногда нападает на домашний скот.",
+               en:"The largest wild member of the dog family in the region. Family packs hold large territories. Hunts hoofed animals and rodents and sometimes attacks livestock."},
+  facts:[], photoTodo:"Canis lupus, степь", wiki:"Волк"},
+ {id:"corsac", name:{kk:"Қарсақ",ru:"Корсак",en:"Corsac fox"}, synonyms:{ru:["степная лисица"]},
+  latin:"Vulpes corsac", group:"mammals", diet:"carnivore", status:["wild"], redbook_kz:"", iucn:"LC", zones:["steppe"],
+  short:{ru:"Корсак — маленькая степная лисица с большими ушами. Днём он прячется в норе.",kk:"Қарсақ — үлкен құлақты кішкентай дала түлкісі. Күндіз ол інде жасырынады.",en:"The corsac is a small steppe fox with big ears. It hides in a burrow during the day."},
+  description:{ru:"Мельче обыкновенной лисицы, с серовато-рыжей шерстью и тёмным кончиком хвоста. Часто занимает норы сурков и сусликов. Питается грызунами, насекомыми, птицами.",
+               en:"Smaller than the red fox, with greyish-ginger fur and a dark tail tip. Often occupies marmot and ground squirrel burrows. Feeds on rodents, insects and birds."},
+  facts:["f_corsac"], photoTodo:"Vulpes corsac", wiki:"Корсак"},
+ {id:"bobak", name:{kk:"Суыр",ru:"Степной сурок",en:"Bobak marmot"}, synonyms:{ru:["байбак","сурок"],kk:["дала суыры"],en:["steppe marmot","bobak"]},
+  latin:"Marmota bobak", group:"mammals", diet:"herbivore", status:["wild"], redbook_kz:"", iucn:"LC", zones:["steppe"],
+  short:{ru:"Байбак — степной сурок. Он живёт семьями в глубоких норах и громко свистит, если видит опасность.",kk:"Суыр семьясымен терең індерде тұрады, қауіп төнсе қатты ысқырады.",en:"The bobak is a steppe marmot. Families live in deep burrows and whistle loudly when they spot danger."},
+  description:{ru:"Крупный грызун с песочной шерстью. Колонии байбаков роют сложные норы, а выбросы земли — сурчины — меняют рельеф и растительность степи. Большую часть года спит.",
+               en:"A large sandy-coloured rodent. Colonies dig complex burrows; their earth mounds change the steppe’s relief and vegetation. It sleeps for most of the year."},
+  facts:["f_bobak"], photoTodo:"Marmota bobak у норы", wiki:"Степной_сурок"},
+ {id:"roe-deer", name:{kk:"Елік",ru:"Сибирская косуля",en:"Siberian roe deer"}, synonyms:{ru:["косуля","козуля"],en:["roe deer"]},
+  latin:"Capreolus pygargus", group:"mammals", diet:"herbivore", status:["wild"], redbook_kz:"", iucn:"LC", zones:["floodplain","bayanaul"],
+  short:{ru:"Косуля — небольшой изящный олень. Она прячется в пойменных лесах и сосновых борах.",kk:"Елік — кішкентай сымбатты бұғы. Ол жайылма ормандары мен қарағайлы орманда жасырынады.",en:"The roe deer is a small, graceful deer that hides in riverside woods and pine forests."},
+  description:{ru:"Лёгкий олень с белым «зеркалом» сзади. У самцов небольшие рога, которые сбрасываются каждый год. Питается травой, листьями, побегами.",
+               en:"A slender deer with a white rump patch. Males have small antlers that are shed every year. Eats grass, leaves and shoots."},
+  facts:["f_roe"], photoTodo:"Capreolus pygargus", wiki:"Сибирская_косуля"},
+ {id:"hedgehog", name:{kk:"Кірпі",ru:"Ёж",en:"Hedgehog"}, synonyms:{ru:["ежик"]},
+  latin:"Erinaceidae", latinTodo:true, group:"mammals", diet:"insectivore", status:["wild","neighbor"], redbook_kz:"", iucn:"", zones:["settlements","floodplain","steppe"],
+  short:{ru:"Ёж — колючий ночной охотник на насекомых. Его можно встретить даже в саду или на даче.",kk:"Кірпі — түнде жәндік аулайтын тікенді аң. Оны тіпті бақшадан да кездестіруге болады.",en:"The hedgehog is a prickly night-time insect hunter, often seen in gardens."},
+  description:{ru:"Ежи активны ночью, поедают насекомых, червей и слизней. Зиму проводят в спячке в укрытии из листьев. Часто гибнут на дорогах. Какие именно виды ежей встречаются в области — уточняется.",
+               en:"Hedgehogs are active at night and eat insects, worms and slugs. They hibernate in winter in a nest of leaves and often die on roads. Exact species in the region are being confirmed."},
+  facts:["f_hedgehog"], photoTodo:"ёж (вид уточнить)", wiki:"Ежовые"},
+ {id:"wild-boar", name:{kk:"Қабан",ru:"Кабан",en:"Wild boar"}, synonyms:{ru:["вепрь"],kk:["жабайы шошқа"]},
+  latin:"Sus scrofa", group:"mammals", diet:"omnivore", status:["wild"], redbook_kz:"", iucn:"LC", zones:["floodplain"],
+  short:{ru:"Кабан — дикий родственник домашней свиньи. Он роет землю рылом в поисках корней и личинок.",kk:"Қабан — үй шошқасының жабайы туысы. Ол тамыр мен құрт іздеп жерді тұмсығымен қопарады.",en:"The wild boar is a wild relative of the pig. It digs with its snout for roots and grubs."},
+  description:{ru:"Крупное животное с жёсткой щетиной. Держится в густых зарослях поймы, питается корнями, насекомыми, мелкими животными. Самки с поросятами осторожны и могут быть опасны.",
+               en:"A large bristly animal living in dense floodplain thickets. Eats roots, insects and small animals. Sows with piglets are wary and can be dangerous."},
+  facts:[], photoTodo:"Sus scrofa", wiki:"Кабан"},
+ {id:"house-sparrow", name:{kk:"Үй торғайы",ru:"Домовый воробей",en:"House sparrow"}, synonyms:{ru:["воробей"],kk:["торғай"],en:["sparrow"]},
+  latin:"Passer domesticus", group:"birds", diet:"omnivore", status:["wild","neighbor"], redbook_kz:"", iucn:"LC", zones:["settlements"],
+  short:{ru:"Воробей живёт рядом с человеком круглый год. Летом он кормит птенцов насекомыми.",kk:"Торғай адамның қасында жыл бойы тұрады. Жазда балапандарын жәндіктермен қоректендіреді.",en:"The house sparrow lives alongside people all year round and feeds its chicks on insects."},
+  description:{ru:"Небольшая птица; у самца серая шапочка и чёрный «галстук». Гнездится в щелях зданий. Ест семена и насекомых.",
+               en:"A small bird; males have a grey crown and a black bib. Nests in gaps in buildings and eats seeds and insects."},
+  facts:[], photoTodo:"Passer domesticus, самец", wiki:"Домовый_воробей"},
+ {id:"magpie", name:{kk:"Сауысқан",ru:"Сорока",en:"Eurasian magpie"}, synonyms:{en:["magpie"]},
+  latin:"Pica pica", group:"birds", diet:"omnivore", status:["wild","neighbor"], redbook_kz:"", iucn:"LC", zones:["settlements","floodplain"],
+  short:{ru:"Сорока — умная чёрно-белая птица с длинным хвостом.",kk:"Сауысқан — ұзын құйрықты, ақылды ала құс.",en:"The magpie is a clever black-and-white bird with a long tail."},
+  description:{ru:"Строит большое гнездо с «крышей» из веток. Всеядна: ест насекомых, семена, ягоды, яйца.",
+               en:"Builds a large domed nest of twigs. Omnivorous: eats insects, seeds, berries and eggs."},
+  facts:["f_magpie"], photoTodo:"Pica pica", wiki:"Обыкновенная_сорока"},
+ {id:"kazakh-horse", name:{kk:"Жабы жылқысы",ru:"Казахская лошадь (жабе)",en:"Kazakh horse (Zhabe)"}, synonyms:{ru:["жабе","лошадь"],kk:["жылқы","жабы"],en:["horse"]},
+  latin:"Equus caballus", group:"mammals", diet:"herbivore", status:["domestic"], redbook_kz:"", iucn:"", zones:["settlements","steppe"],
+  short:{ru:"Жабе — выносливая казахская лошадь. Она круглый год может пастись в степи.",kk:"Жабы — төзімді қазақ жылқысы. Ол жыл бойы далада жайыла алады.",en:"The Zhabe is a hardy Kazakh horse that can graze in the steppe all year round."},
+  description:{ru:"Невысокая крепкая порода, приспособленная к тебеневке — добыванию корма из-под снега. Разводится для получения молока (кумыса) и мяса.",
+               en:"A short, sturdy breed adapted to winter grazing under the snow. Raised for milk (kumys) and meat."},
+  facts:["f_horse"], photoTodo:"лошадь породы жабе", wiki:"Казахская_лошадь"},
+ {id:"pike", name:{kk:"Шортан",ru:"Щука",en:"Northern pike"}, synonyms:{en:["pike"]},
+  latin:"Esox lucius", group:"fish", diet:"carnivore", status:["wild"], redbook_kz:"", iucn:"LC", zones:["floodplain","lakes"],
+  short:{ru:"Щука — хищная рыба с длинной пастью. Она подстерегает добычу в зарослях.",kk:"Шортан — ұзын ауызды жыртқыш балық. Ол олжасын қалың шөп арасында аңдиды.",en:"The pike is a predatory fish with long jaws that ambushes prey from water plants."},
+  description:{ru:"Обитает в Иртыше, протоках и озёрах. Охотится из засады на рыбу и лягушек. Нерестится ранней весной на залитых лугах.",
+               en:"Lives in the Irtysh, its channels and lakes. Ambushes fish and frogs. Spawns in early spring on flooded meadows."},
+  facts:[], photoTodo:"Esox lucius", wiki:"Обыкновенная_щука"},
+ {id:"moor-frog", name:{kk:"Үшкір тұмсықты бақа",ru:"Остромордая лягушка",en:"Moor frog"}, synonyms:{ru:["лягушка"],kk:["бақа"],en:["frog"]},
+  latin:"Rana arvalis", group:"amphibians", diet:"insectivore", status:["wild"], redbook_kz:"", iucn:"LC", zones:["floodplain","lakes"],
+  short:{ru:"Весной самцы этой лягушки на несколько дней становятся голубыми!",kk:"Көктемде бұл бақаның еркектері бірнеше күнге көгілдір түске енеді!",en:"In spring the males of this frog turn blue for a few days!"},
+  description:{ru:"Небольшая бурая лягушка с заострённой мордой. Живёт на влажных лугах и у водоёмов, ест насекомых. Голубая окраска самцов держится лишь в брачный период.",
+               en:"A small brown frog with a pointed snout. Lives in damp meadows and near water and eats insects. Males are blue only during the breeding season."},
+  facts:["f_frog"], photoTodo:"Rana arvalis, голубой самец", wiki:"Остромордая_лягушка"},
+ {id:"sand-lizard", name:{kk:"Шапшаң кесіртке",ru:"Прыткая ящерица",en:"Sand lizard"}, synonyms:{ru:["ящерица"],kk:["кесіртке"],en:["lizard"]},
+  latin:"Lacerta agilis", group:"reptiles", diet:"insectivore", status:["wild"], redbook_kz:"", iucn:"LC", zones:["steppe","bayanaul"],
+  short:{ru:"Прыткая ящерица любит греться на солнце. Если её схватить за хвост, она может его отбросить.",kk:"Шапшаң кесіртке күнге жылынғанды жақсы көреді. Құйрығынан ұстаса, оны тастап кетеді.",en:"The sand lizard loves to bask in the sun. If grabbed by the tail, it can drop it."},
+  description:{ru:"Ящерица с пёстрой спиной; весной самцы ярко-зелёные по бокам. Охотится на насекомых и пауков. Зимует в норах.",
+               en:"A lizard with a patterned back; in spring males have bright green flanks. Hunts insects and spiders and hibernates in burrows."},
+  facts:[], photoTodo:"Lacerta agilis, самец", wiki:"Прыткая_ящерица"},
+ {id:"bumblebee", name:{kk:"Түкті аралар",ru:"Шмели",en:"Bumblebees"}, synonyms:{ru:["шмель"],kk:["түкті ара"],en:["bumblebee"]},
+  latin:"Bombus spp.", group:"insects", diet:"herbivore", status:["wild","neighbor"], redbook_kz:"", iucn:"", zones:["steppe","floodplain","settlements"],
+  short:{ru:"Шмели — пушистые пчёлы, которые опыляют цветы. Они летают даже в прохладную погоду.",kk:"Түкті аралар — гүлдерді тозаңдандыратын үлпілдек аралар. Олар салқын күні де ұша береді.",en:"Bumblebees are fluffy bees that pollinate flowers. They fly even in cool weather."},
+  description:{ru:"Крупные пушистые пчёлы, живущие небольшими семьями. Питаются нектаром и пыльцой и опыляют луговые растения и клевер. Страдают от пестицидов и распашки лугов.",
+               en:"Large, furry bees living in small colonies. They feed on nectar and pollen and pollinate meadow plants and clover. Threatened by pesticides and loss of meadows."},
+  facts:[], photoTodo:"Bombus sp. на цветке", wiki:"Шмели"}
+];
+
+const FACTS = [
+ {id:"f_bobak", animal:"bobak",
+  q:{ru:"Кто из жителей степи спит больше полугода?",kk:"Дала тұрғындарының қайсысы жарты жылдан астам ұйықтайды?",en:"Which steppe animal sleeps for more than half the year?"},
+  a:{ru:"Байбак! Осенью сурки закрывают нору земляной пробкой и спят до весны.",kk:"Суыр! Күзде ол інін топырақпен бітеп, көктемге дейін ұйықтайды.",en:"The bobak marmot! In autumn marmots plug their burrow with earth and sleep until spring."}},
+ {id:"f_golden", animal:"golden-eagle",
+  q:{ru:"Какую хищную птицу казахские охотники приручают для охоты на лис?",kk:"Қазақ аңшылары түлкі аулау үшін қандай жыртқыш құсты қолға үйретеді?",en:"Which bird of prey do Kazakh hunters train to hunt foxes?"},
+  a:{ru:"Беркута. Охота с ловчими птицами — древняя традиция казахов.",kk:"Бүркітті. Құсбегілік — қазақтың ежелгі дәстүрі.",en:"The golden eagle. Hunting with birds of prey is an ancient Kazakh tradition."}},
+ {id:"f_crane", animal:"demoiselle-crane",
+  q:{ru:"Как зовут самого маленького журавля в мире?",kk:"Әлемдегі ең кішкентай тырна қалай аталады?",en:"What is the smallest crane in the world?"},
+  a:{ru:"Журавль-красавка: его рост меньше метра.",kk:"Қарқылдақ тырна: оның бойы бір метрден аз.",en:"The demoiselle crane: it stands less than a metre tall."}},
+ {id:"f_bustard", animal:"great-bustard",
+  q:{ru:"Какая наша птица — одна из самых тяжёлых летающих птиц мира?",en:"Which of our birds is one of the heaviest flying birds in the world?"},
+  a:{ru:"Дрофа. Крупные самцы весят больше 10 килограммов.",en:"The great bustard. Large males weigh over 10 kilograms."}},
+ {id:"f_pelican", animal:"dalmatian-pelican",
+  q:{ru:"У какой птицы размах крыльев около трёх метров?",en:"Which bird has a wingspan of about three metres?"},
+  a:{ru:"У кудрявого пеликана — одной из крупнейших летающих птиц.",en:"The Dalmatian pelican — one of the largest flying birds."}},
+ {id:"f_lapwing", animal:"sociable-lapwing",
+  q:{ru:"Какая птица наших степей находится на грани исчезновения?",en:"Which steppe bird of ours is critically endangered?"},
+  a:{ru:"Кречётка: МСОП относит её к категории CR — «на грани исчезновения».",en:"The sociable lapwing: the IUCN lists it as Critically Endangered (CR)."}},
+ {id:"f_saker", animal:"saker",
+  q:{ru:"Какой сокол наших степей стал национальной птицей Монголии?",en:"Which falcon of our steppes became Mongolia’s national bird?"},
+  a:{ru:"Балобан. Монголия объявила его национальной птицей в 2012 году.",en:"The saker falcon. Mongolia declared it the national bird in 2012."}},
+ {id:"f_steppe_eagle", animal:"steppe-eagle",
+  q:{ru:"Какой орёл может строить гнездо прямо на земле?",en:"Which eagle may build its nest right on the ground?"},
+  a:{ru:"Степной орёл: в степи мало деревьев, поэтому он гнездится на холмиках и кустах.",en:"The steppe eagle: with few trees in the steppe, it nests on mounds and bushes."}},
+ {id:"f_corsac", animal:"corsac",
+  q:{ru:"Какая лисица часто селится в чужих норах?",en:"Which fox often moves into other animals’ burrows?"},
+  a:{ru:"Корсак: он охотно занимает старые норы сурков и сусликов.",en:"The corsac: it readily takes over old marmot and ground squirrel burrows."}},
+ {id:"f_roe", animal:"roe-deer",
+  q:{ru:"У кого рога вырастают заново каждый год?",en:"Whose antlers grow back every year?"},
+  a:{ru:"У самцов косули: они сбрасывают рога в конце осени, а к весне вырастают новые.",en:"Male roe deer: they shed antlers in late autumn and grow new ones by spring."}},
+ {id:"f_hedgehog", animal:"hedgehog",
+  q:{ru:"Кто проводит зиму в гнезде из листьев?",en:"Who spends the winter in a nest of leaves?"},
+  a:{ru:"Ёж. Поэтому осенью не стоит убирать в саду все кучи листвы.",en:"The hedgehog. That’s why it’s good to leave some leaf piles in the garden."}},
+ {id:"f_magpie", animal:"magpie",
+  q:{ru:"Какая птица узнаёт себя в зеркале?",en:"Which bird recognises itself in a mirror?"},
+  a:{ru:"Сорока. Учёные показали это в опытах с зеркалом в 2008 году.",en:"The magpie. Scientists showed this in mirror experiments in 2008."}},
+ {id:"f_horse", animal:"kazakh-horse",
+  q:{ru:"Как лошадь находит корм зимой в заснеженной степи?",en:"How does a horse find food in the snowy winter steppe?"},
+  a:{ru:"Казахские лошади разгребают снег копытами — это называется тебеневка.",en:"Kazakh horses dig through snow with their hooves to reach the grass."}},
+ {id:"f_frog", animal:"moor-frog",
+  q:{ru:"Какая лягушка весной становится голубой?",en:"Which frog turns blue in spring?"},
+  a:{ru:"Остромордая: в брачный сезон её самцы ненадолго окрашиваются в голубой цвет.",en:"The moor frog: males turn blue briefly in the breeding season."}},
+ {id:"f_argali", animal:"argali",
+  q:{ru:"Как зовут самого крупного дикого барана в мире?",en:"What is the largest wild sheep in the world?"},
+  a:{ru:"Архар. В Павлодарской области он обитает в горах Баянаула.",en:"The argali. In Pavlodar Region it lives in the Bayanaul hills."}}
+];
+
+const SOURCES = [
+  {t:{ru:"Красная книга Республики Казахстан (действующая редакция) — TODO: ссылка",kk:"Қазақстан Республикасының Қызыл кітабы — TODO: сілтеме",en:"Red Data Book of the Republic of Kazakhstan — TODO: link"}},
+  {t:{ru:"Баянаульский государственный национальный природный парк — TODO: ссылка",kk:"Баянауыл мемлекеттік ұлттық табиғи паркі — TODO: сілтеме",en:"Bayanaul State National Nature Park — TODO: link"}},
+  {t:{ru:"GBIF — Глобальная информационная система по биоразнообразию",kk:"GBIF — Биоәртүрлілік жөніндегі жаһандық ақпараттық жүйе",en:"GBIF — Global Biodiversity Information Facility"},u:"https://www.gbif.org/"},
+  {t:{ru:"Красный список МСОП",kk:"ХТҚО Қызыл тізімі",en:"IUCN Red List"},u:"https://www.iucnredlist.org/"},
+  {t:{ru:"Wikimedia Commons — фотографии под свободными лицензиями",kk:"Wikimedia Commons — еркін лицензиялы фотолар",en:"Wikimedia Commons — freely licensed photos"},u:"https://commons.wikimedia.org/"},
+  {t:{ru:"Википедия (CC BY-SA) — как вспомогательный источник",kk:"Уикипедия (CC BY-SA) — көмекші дереккөз",en:"Wikipedia (CC BY-SA) — as a secondary source"},u:"https://ru.wikipedia.org/"}
+];
+
+const IUCN = {
+  LC:{ru:"Вызывающие наименьшие опасения",kk:"Ең аз қауіп төндіретін",en:"Least Concern"},
+  NT:{ru:"Близкие к уязвимому положению",kk:"Осалдыққа жақын",en:"Near Threatened"},
+  VU:{ru:"Уязвимые",kk:"Осал",en:"Vulnerable"},
+  EN:{ru:"Вымирающие",kk:"Жойылып бара жатқан",en:"Endangered"},
+  CR:{ru:"На грани исчезновения",kk:"Жойылу алдында",en:"Critically Endangered"}
+};
+
+/* ================= ИКОНКИ ================= */
+const ICONS = {
+  redbook:'<path d="M5 4h10a3 3 0 0 1 3 3v13H8a3 3 0 0 1-3-3z"/><path d="M5 17a3 3 0 0 1 3-3h10"/><path d="M11.5 6.5v4M11.5 12v.01"/>',
+  wild:'<path d="M12 3l6 9h-4l4 6H6l4-6H6z"/><path d="M12 18v3"/>',
+  neighbor:'<path d="M4 11l8-7 8 7v9H4z"/><path d="M10 20v-5h4v5"/>',
+  domestic:'<path d="M7 4v9a5 5 0 0 0 10 0V4"/><path d="M5 4h4M15 4h4M9 9h.01M15 9h.01"/>',
+  mammals:'<circle cx="7" cy="9" r="1.7"/><circle cx="12" cy="6.5" r="1.7"/><circle cx="17" cy="9" r="1.7"/><path d="M8 17c0-3 2-5.5 4-5.5s4 2.5 4 5.5c0 1.5-1.5 2.5-4 2.5s-4-1-4-2.5z"/>',
+  birds:'<path d="M3 13c4-1 6-6 9.5-6 2 0 3 1 4 2.5l4 .5-4 1.5c-1 4-4 7-9 7l2-3c-3 0-5-1-6.5-2.5z"/>',
+  fish:'<path d="M3 12c3-4 7-6 11-4l4-3v14l-4-3c-4 2-8 0-11-4z"/><path d="M8 11.5h.01"/>',
+  reptiles:'<path d="M3 17c3 0 4-3 7-3s4 3 7 3c2 0 4-2 4-4s-2-3-4-3-3 2-6 2"/><path d="M8 14l-1 3M13 14l1 3M16 10l1-3"/>',
+  amphibians:'<path d="M5 17c0-5 3-8 7-8s7 3 7 8"/><circle cx="8.5" cy="7.5" r="2"/><circle cx="15.5" cy="7.5" r="2"/><path d="M5 17l-2 2M19 17l2 2M9 17h6"/>',
+  insects:'<ellipse cx="12" cy="14" rx="4" ry="5"/><path d="M8 10c-3-3-5-1-4 1s4 1 4 1M16 10c3-3 5-1 4 1s-4 1-4 1M12 9V6M10 4l2 2 2-2M8.5 14h7"/>',
+  carnivore:'<path d="M5 5c2 3 2 7 0 11M10 4c2 4 2 9 0 14M15 4c2 4 2 9 0 14M19 6c1.5 3 1.5 7 0 10"/>',
+  herbivore:'<path d="M5 19c0-8 6-14 14-14 0 8-6 14-14 14z"/><path d="M5 19l8-8"/>',
+  omnivore:'<circle cx="12" cy="12" r="8"/><path d="M9 15c0-4 2-6 6-6 0 4-2 6-6 6z"/>',
+  insectivore:'<ellipse cx="12" cy="13" rx="3.5" ry="4.5"/><path d="M12 8.5V6M8.5 11H5.5M15.5 11h3M8.5 15h-3M15.5 15h3"/>',
+  zone:'<path d="M12 21s-6-5.5-6-11a6 6 0 0 1 12 0c0 5.5-6 11-6 11z"/><circle cx="12" cy="10" r="2.2"/>',
+  search:'<circle cx="11" cy="11" r="6.5"/><path d="M20 20l-4.2-4.2"/>',
+  close:'<path d="M6 6l12 12M18 6L6 18"/>',
+  menu:'<path d="M4 7h16M4 12h16M4 17h16"/>',
+  filter:'<path d="M4 6h16M7 12h10M10 18h4"/>',
+  share:'<circle cx="6" cy="12" r="2.5"/><circle cx="18" cy="6" r="2.5"/><circle cx="18" cy="18" r="2.5"/><path d="M8.2 10.8l7.6-3.6M8.2 13.2l7.6 3.6"/>',
+  print:'<path d="M7 9V4h10v5M7 17H5a1 1 0 0 1-1-1v-6a1 1 0 0 1 1-1h14a1 1 0 0 1 1 1v6a1 1 0 0 1-1 1h-2"/><path d="M7 14h10v6H7z"/>',
+  map:'<path d="M9 4l-5 2v14l5-2 6 2 5-2V4l-5 2z"/><path d="M9 4v14M15 6v14"/>',
+  bulb:'<path d="M9 18h6M10 21h4M12 3a6 6 0 0 0-3.5 10.9c.6.5 1 1.2 1 2.1h5c0-.9.4-1.6 1-2.1A6 6 0 0 0 12 3z"/>',
+  info:'<circle cx="12" cy="12" r="9"/><path d="M12 11v6M12 7.5v.01"/>',
+  heart:'<path d="M12 20s-7-4.4-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 10c0 5.6-7 10-7 10z"/>',
+  book:'<path d="M4 5c3-1 6-1 8 1 2-2 5-2 8-1v14c-3-1-6-1-8 1-2-2-5-2-8-1z"/><path d="M12 6v14"/>',
+  shield:'<path d="M12 3l7 3v6c0 4.5-3 7.5-7 9-4-1.5-7-4.5-7-9V6z"/>'
+};
+const ic = (n, cls="") => `<svg class="ic ${cls}" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">${ICONS[n]||""}</svg>`;
+const SIL = {
+  mammals:'<path d="M14 30c0-9 9-13 24-13h22c4-6 10-9 16-7l6 5-4 6h-6c0 9-3 14-8 16v14h-5l-1-12H36l-2 12h-5l-1-13c-8-1-14-3-14-8zM14 28c-4 0-7 2-8 6"/>',
+  birds:'<path d="M8 36c14-2 24-4 34-10 4-9 11-13 18-12 5 1 8 4 9 7l11 2-11 3c-1 9-8 17-20 20l-14 2 6-6c-12 2-22 0-33-6z"/><path d="M34 34c8-12 22-18 36-16-10 6-18 14-22 22z" opacity=".6"/>',
+  fish:'<path d="M12 30c12-14 32-16 52-8l16-10-4 18 4 18-16-10c-20 8-40 6-52-8z"/>',
+  reptiles:'<path d="M6 36c10 0 18-2 28-4 6-6 14-8 22-6l18-2c6 0 8 4 2 6l-20 4c-8 6-18 8-28 6-8 0-14 0-22-4z"/><path d="M30 34l-4 10M44 36l2 10M50 26l-2-8M62 26l4-8"/>',
+  amphibians:'<path d="M24 46c-2-12 10-22 26-22s28 10 26 22c-6 4-46 4-52 0z"/><circle cx="38" cy="22" r="6"/><circle cx="62" cy="22" r="6"/><path d="M24 46l-12 6M76 46l12 6"/>',
+  insects:'<ellipse cx="50" cy="36" rx="18" ry="14"/><ellipse cx="38" cy="18" rx="12" ry="8" opacity=".6"/><ellipse cx="62" cy="18" rx="12" ry="8" opacity=".6"/><circle cx="72" cy="36" r="7"/>'
+};
+const sil = g => `<svg class="sil" viewBox="0 0 100 60" aria-hidden="true" fill="currentColor">${SIL[g]||SIL.mammals}</svg>`;
+
+/* ================= СОСТОЯНИЕ ================= */
+const SUPPORTED = ["kk","ru","en"];
+const store = { get(k){try{return localStorage.getItem(k)}catch(e){return null}}, set(k,v){try{localStorage.setItem(k,v)}catch(e){}} };
+const params = new URLSearchParams(location.search);
+let lang = (()=>{
+  const p = params.get("lang"); if (SUPPORTED.includes(p)) return p;
+  const s = store.get("lang"); if (SUPPORTED.includes(s)) return s;
+  const nav = (navigator.languages||[navigator.language||""]).map(x=>x.slice(0,2).toLowerCase());
+  for (const n of nav) if (SUPPORTED.includes(n)) return n;
+  return "ru";
+})();
+const state = {
+  q: params.get("q")||"",
+  status: new Set((params.get("status")||"").split(",").filter(Boolean)),
+  group: new Set((params.get("group")||"").split(",").filter(Boolean)),
+  diet: new Set((params.get("diet")||"").split(",").filter(Boolean)),
+  zone: new Set((params.get("zone")||"").split(",").filter(Boolean)),
+  sort: ["alpha","group","red"].includes(params.get("sort")) ? params.get("sort") : "alpha",
+  shown: 12
+};
+const PAGE = 12;
+const FILTER_KEYS = ["status","group","diet","zone"];
+
+/* ================= УТИЛИТЫ ================= */
+const $ = s => document.querySelector(s);
+const $$ = s => [...document.querySelectorAll(s)];
+const esc = s => String(s).replace(/[&<>"']/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+const t = k => (I18N[lang][k] !== undefined ? I18N[lang][k] : I18N.ru[k] !== undefined ? I18N.ru[k] : k);
+const L = o => (o && (o[lang] || o.ru)) || "";
+const Lf = o => { if (!o) return ""; if (o[lang]) return esc(o[lang]); if (o.ru) return esc(o.ru) + (lang!=="ru" ? ` <span class="tr-note" lang="${lang}">${esc(t("translating"))}</span>` : ""); return ""; };
+const byId = id => ANIMALS.find(a => a.id === id);
+const zoneById = id => ZONES.find(z => z.id === id);
+const catLabel = (k, v) => k==="zone" ? L(zoneById(v).name) : L(CATS[k][v]);
+function track(ev, data){ (window.dataLayer = window.dataLayer || []).push({event:ev, ...data}); }
+let toastTimer;
+function toast(msg){ const el=$("#toast"); el.textContent=msg; el.classList.add("show"); clearTimeout(toastTimer); toastTimer=setTimeout(()=>el.classList.remove("show"),2200); }
+
+/* Нормализация: регистр, ё/е, казахские буквы. Посимвольная, чтобы индексы совпадали для подсветки. */
+const NMAP = {"ё":"е","ә":"а","ғ":"г","қ":"к","ң":"н","ө":"о","ұ":"у","ү":"у","һ":"х","і":"и","ъ":"ь"};
+const norm = s => { let r=""; for (const ch of String(s).toLowerCase()) r += (NMAP[ch] || ch); return r; };
+function lev(a,b){ const m=a.length,n=b.length; if(!m) return n; if(!n) return m; let prev=Array.from({length:n+1},(_,i)=>i); for(let i=1;i<=m;i++){ const cur=[i]; for(let j=1;j<=n;j++){ cur[j]=Math.min(prev[j]+1,cur[j-1]+1,prev[j-1]+(a[i-1]===b[j-1]?0:1)); } prev=cur; } return prev[n]; }
+
+ANIMALS.forEach(a=>{
+  const fields = [...Object.values(a.name), a.latin, ...Object.values(a.synonyms||{}).flat()].map(norm);
+  a._fields = fields;
+  a._words = [...new Set(fields.flatMap(f => f.split(/[\s\-()«»,.]+/).filter(w=>w.length>1)))];
+});
+function score(a, nq){
+  if (!nq) return 0;
+  let best = Infinity;
+  for (const f of a._fields){ const i=f.indexOf(nq); if (i===0) best=Math.min(best,0); else if (i>0) best=Math.min(best, f[i-1]===" "||f[i-1]==="-" ? 0.2 : 0.5); }
+  if (best < Infinity) return best;
+  const tol = nq.length>=7 ? 2 : nq.length>=4 ? 1 : 0;
+  if (!tol) return null;
+  for (const w of a._words){ const d=Math.min(lev(nq,w), w.length>nq.length ? lev(nq,w.slice(0,nq.length)) : 99); if (d<=tol) best=Math.min(best,1+d); }
+  return best===Infinity ? null : best;
+}
+function hl(text, q){
+  const nq = norm(q.trim()); if (!nq) return esc(text);
+  const i = norm(text).indexOf(nq); if (i<0) return esc(text);
+  return esc(text.slice(0,i)) + "<mark>" + esc(text.slice(i,i+nq.length)) + "</mark>" + esc(text.slice(i+nq.length));
+}
+
+/* ================= ФИЛЬТРАЦИЯ ================= */
+function filtered(){
+  const nq = norm(state.q.trim());
+  const res = [];
+  for (const a of ANIMALS){
+    if (state.status.size && !a.status.some(s=>state.status.has(s))) continue;
+    if (state.group.size && !state.group.has(a.group)) continue;
+    if (state.diet.size && !state.diet.has(a.diet)) continue;
+    if (state.zone.size && !a.zones.some(z=>state.zone.has(z))) continue;
+    const sc = score(a, nq); if (sc===null) continue;
+    res.push({a, sc});
+  }
+  const groupOrder = Object.keys(CATS.group);
+  const nameCmp = (x,y) => L(x.a.name).localeCompare(L(y.a.name), lang);
+  const cmp = {
+    alpha: nameCmp,
+    group: (x,y) => groupOrder.indexOf(x.a.group)-groupOrder.indexOf(y.a.group) || nameCmp(x,y),
+    red: (x,y) => (y.a.status.includes("redbook")-x.a.status.includes("redbook")) || nameCmp(x,y)
+  }[state.sort];
+  res.sort((x,y) => (nq ? Math.floor(x.sc)-Math.floor(y.sc) : 0) || cmp(x,y));
+  return res.map(r=>r.a);
+}
+
+let urlTimer;
+function writeURL(){
+  clearTimeout(urlTimer);
+  urlTimer = setTimeout(()=>{
+    const p = new URLSearchParams();
+    if (state.q.trim()) p.set("q", state.q.trim());
+    FILTER_KEYS.forEach(k => { if (state[k].size) p.set(k, [...state[k]].join(",")); });
+    if (state.sort!=="alpha") p.set("sort", state.sort);
+    p.set("lang", lang);
+    try { history.replaceState(history.state, "", location.pathname + "?" + p.toString() + location.hash); } catch(e){}
+  }, 250);
+}
+
+/* ================= РЕНДЕР: КАРТОЧКИ ================= */
+function cardHTML(a, q=""){
+  const red = a.status.includes("redbook");
+  return `<button type="button" class="card" data-open="${a.id}">
+    <div class="ph" data-g="${a.group}">${sil(a.group)}
+      ${red ? `<span class="rb-badge">${ic("redbook")}${esc(L(CATS.status.redbook))}</span>` : ""}
+      <span class="wanted">${esc(t("photo_wanted"))}</span>
+    </div>
+    <div class="cbody">
+      <h3>${hl(L(a.name), q)}</h3>
+      <span class="latin" lang="la">${hl(a.latin, q)}</span>
+      <span class="tags">
+        <span class="tag">${ic(a.group)}${esc(L(CATS.group[a.group]))}</span>
+        <span class="tag">${ic(a.diet)}${esc(L(CATS.diet[a.diet]))}</span>
+      </span>
+    </div>
+  </button>`;
+}
+
+function renderFilters(){
+  const box = $("#filterGroups");
+  box.innerHTML = FILTER_KEYS.map(k=>{
+    const vals = k==="zone" ? ZONES.map(z=>z.id) : Object.keys(CATS[k]);
+    return `<fieldset><legend>${esc(t("f_"+k))}</legend>${vals.map(v=>{
+      const n = ANIMALS.filter(a => k==="status"?a.status.includes(v):k==="zone"?a.zones.includes(v):a[k]===v).length;
+      const iconName = k==="zone" ? "zone" : v;
+      return `<label><input type="checkbox" data-f="${k}" value="${v}" ${state[k].has(v)?"checked":""}>${ic(iconName)}<span>${esc(catLabel(k,v))} <span style="color:var(--muted)">(${n})</span></span></label>`;
+    }).join("")}</fieldset>`;
+  }).join("");
+}
+
+function renderCatalog(){
+  const list = filtered();
+  const grid = $("#grid");
+  grid.innerHTML = list.slice(0, state.shown).map(a => cardHTML(a, state.q)).join("");
+  $("#found").textContent = t("found") + list.length;
+  $("#empty").hidden = list.length > 0;
+  $("#more").parentElement.hidden = list.length <= state.shown;
+  // чипы
+  const chips = [];
+  FILTER_KEYS.forEach(k => state[k].forEach(v => chips.push(`<button type="button" class="chip" data-chip="${k}:${v}" aria-label="${esc(t("remove"))}: ${esc(catLabel(k,v))}">${esc(catLabel(k,v))}<span class="x">${ic("close")}</span></button>`)));
+  if (state.q.trim()) chips.unshift(`<button type="button" class="chip" data-chip="q:" aria-label="${esc(t("remove"))}">«${esc(state.q.trim())}»<span class="x">${ic("close")}</span></button>`);
+  if (chips.length) chips.push(`<button type="button" class="linkbtn" data-reset>${esc(t("reset_all"))}</button>`);
+  $("#chips").innerHTML = chips.join("");
+  const active = FILTER_KEYS.reduce((n,k)=>n+state[k].size,0);
+  $("#filterToggle").innerHTML = ic("filter") + esc(t("filters_btn")) + (active?` (${active})`:"");
+  writeURL();
+}
+
+function resetAll(){
+  state.q=""; FILTER_KEYS.forEach(k=>state[k].clear()); state.shown=PAGE;
+  $("#q").value=""; $("#heroQ").value="";
+  renderFilters(); renderCatalog();
+}
+
+/* ================= МИНИ-КАРТА (SVG, работает без интернета) ================= */
+const proj = ([lat,lng]) => [((lng-73.1)/(79.4-73.1)*200).toFixed(1), ((54.25-lat)/(54.25-50.3)*190).toFixed(1)];
+function miniMap(active, label){
+  const order = ["steppe","floodplain","lakes","bayanaul","settlements"];
+  const polys = order.map(id=>{
+    const z = zoneById(id), on = active.includes(id);
+    return GEO[id].map(r=>`<polygon points="${r.map(p=>proj(p).join(",")).join(" ")}" fill="${z.color}" fill-opacity="${on?0.85:0.13}" stroke="${on?z.color:"none"}" stroke-width="1"/>`).join("");
+  }).join("");
+  const river = `<polyline points="${IRTYSH.map(p=>proj(p).join(",")).join(" ")}" fill="none" stroke="var(--sky)" stroke-width="1.6" opacity=".8"/>`;
+  const outline = `<polygon points="${REGION.map(p=>proj(p).join(",")).join(" ")}" fill="none" stroke="var(--muted)" stroke-width="1.2"/>`;
+  return `<svg viewBox="0 0 200 190" role="img" aria-label="${esc(label||"")}">${polys}${river}${outline}</svg>`;
+}
+
+/* ================= ПРИРОДНЫЕ ЗОНЫ ================= */
+function renderZones(){
+  $("#zonesGrid").innerHTML = ZONES.map(z=>{
+    const typical = ANIMALS.filter(a=>a.zones.includes(z.id)).slice(0,4).map(a=>L(a.name)).join(", ");
+    return `<button type="button" class="zone-card" data-zone="${z.id}">
+      <div class="zmap">${miniMap([z.id], L(z.name))}</div>
+      <div class="zbody"><h3>${esc(L(z.name))}</h3><p>${esc(L(z.text))}</p>
+      <p class="typ"><b>${esc(t("zone_typical"))}</b> ${esc(typical)}</p></div>
+      <span class="go">${esc(t("zone_show"))}</span>
+    </button>`;
+  }).join("");
+}
+
+/* ================= КРАСНАЯ КНИГА ================= */
+function renderRedbook(){
+  $("#rbCats").innerHTML = t("cat").map(c=>{ const [k,...r]=c.split(" — "); return `<div><dt>${esc(k)}</dt><dd>${esc(r.join(" — "))}</dd></div>`; }).join("")
+    + `<div style="border-left-color:var(--ochre)"><dt><span class="todo">TODO</span></dt><dd>${esc(t("rb_cats_note"))}</dd></div>`;
+  $("#rbRibbon").innerHTML = ANIMALS.filter(a=>a.status.includes("redbook")).map(a=>cardHTML(a)).join("");
+  $("#rules").innerHTML = t("rules").map(r=>`<li>${esc(r)}</li>`).join("");
+}
+
+/* ================= ФАКТЫ ================= */
+let factIdx = (()=>{ const d=new Date(); return Math.floor(Date.UTC(d.getFullYear(),d.getMonth(),d.getDate())/864e5) % FACTS.length; })();
+let factIsDaily = true;
+function renderFactDay(){
+  const f = FACTS[factIdx];
+  $("#factDay").innerHTML = `<div class="sun">${ic("bulb")}</div><div>
+    <div class="lbl">${esc(factIsDaily ? t("fact_of_day") : t("did_you_know"))}</div>
+    <p class="q">${Lf(f.q)}</p><p class="a">${Lf(f.a)}</p>
+    <div class="row" style="display:flex;gap:8px;flex-wrap:wrap">
+      <button type="button" class="btn" data-open="${f.animal}">${esc(t("to_species"))}: ${esc(L(byId(f.animal).name))}</button>
+      <button type="button" class="btn ghost" id="anotherFact">${esc(t("another_fact"))}</button>
+    </div></div>`;
+}
+function renderCarousel(){
+  $("#factCarousel").innerHTML = FACTS.map((f,i)=>`<article class="flip" data-flip="${i}">
+    <div class="flip-inner">
+      <div class="face front"><p>${Lf(f.q)}</p><button type="button" class="btn" data-turn>${esc(t("answer"))}</button></div>
+      <div class="face back" inert><p>${Lf(f.a)}</p><div class="row">
+        <button type="button" class="btn" data-open="${f.animal}">${esc(t("to_species"))}</button>
+        <button type="button" class="btn ghost" data-turn>${esc(t("back"))}</button></div></div>
+    </div></article>`).join("");
+}
+
+/* ================= ИСТОЧНИКИ ================= */
+function renderSources(){
+  $("#srcList").innerHTML = SOURCES.map(s=> s.u ? `<li><a href="${s.u}" target="_blank" rel="noopener">${esc(L(s.t))}</a></li>` : `<li>${esc(L(s.t))}</li>`).join("");
+}
+
+/* ================= МОДАЛЬНОЕ ОКНО ВИДА ================= */
+let openedId = null, openedByPush = false, lastFocus = null;
+function modalHTML(a){
+  const red = a.status.includes("redbook");
+  const tags = [
+    ...a.status.map(s=>`<span class="tag ${s==="redbook"?"red":""}">${ic(s)}${esc(L(CATS.status[s]))}</span>`),
+    `<span class="tag">${ic(a.group)}${esc(L(CATS.group[a.group]))}</span>`,
+    `<span class="tag">${ic(a.diet)}${esc(L(CATS.diet[a.diet]))}</span>`
+  ].join("");
+  const facts = a.facts.map(id=>FACTS.find(f=>f.id===id)).filter(Boolean);
+  const iucnTxt = a.iucn ? `<span class="iucn ${a.iucn}">${a.iucn}</span>${esc(L(IUCN[a.iucn]))} <span class="todo">${esc(t("todo_check"))}</span>` : `${esc(t("no_data"))}`;
+  const rbTxt = red ? (a.redbook_kz ? esc(a.redbook_kz) : `<span class="todo">${esc(t("todo_check"))}</span>`) : esc(t("not_listed"));
+  const wikiUrl = "https://ru.wikipedia.org/wiki/" + encodeURIComponent(a.wiki);
+  return `
+  <div class="m-top">
+    <div class="ph" data-g="${a.group}">${sil(a.group)}<span class="wanted no-print">${esc(t("photo_wanted"))}</span>
+      ${red?`<span class="rb-badge">${ic("redbook")}${esc(L(CATS.status.redbook))}</span>`:""}</div>
+    <div class="m-names">
+      <h2 id="mTitle">${esc(L(a.name))}</h2>
+      <div class="latin" lang="la">${esc(a.latin)}${a.latinTodo?` <span class="todo">${esc(t("todo_check"))}</span>`:""}</div>
+      <table><caption class="sr">${esc(t("names"))}</caption>
+        <tr><th>${esc(t("n_kk"))}</th><td lang="kk">${esc(a.name.kk)}</td></tr>
+        <tr><th>${esc(t("n_ru"))}</th><td lang="ru">${esc(a.name.ru)}</td></tr>
+        <tr><th>${esc(t("n_en"))}</th><td lang="en">${esc(a.name.en)}</td></tr>
+        <tr><th>${esc(t("n_lat"))}</th><td lang="la"><i>${esc(a.latin)}</i></td></tr>
+      </table>
+      <div class="tags">${tags}</div>
+    </div>
+  </div>
+  <div class="m-sec">
+    <h3>${ic("info")}${esc(t("short"))}</h3>
+    <p class="short">${Lf(a.short)}</p>
+    <details class="more"><summary>${esc(t("more"))}</summary><p style="margin:12px 0 0">${Lf(a.description)}</p></details>
+    <h3>${ic("shield")}${esc(t("conservation"))}</h3>
+    <div class="status-grid">
+      <div class="stbox"><div class="k">${esc(t("redbook_kz"))}</div><div class="v">${rbTxt}</div></div>
+      <div class="stbox"><div class="k">${esc(t("iucn"))}</div><div class="v">${iucnTxt}</div></div>
+    </div>
+    <h3>${ic("zone")}${esc(t("habitat"))}</h3>
+    <div class="habitat">${miniMap(a.zones, t("habitat"))}<ul>${a.zones.map(z=>`<li>${esc(L(zoneById(z).name))}</li>`).join("")}</ul></div>
+    ${facts.length?`<h3>${ic("bulb")}${esc(t("did_you_know"))}</h3>${facts.map(f=>`<p class="fact-box">${Lf(f.a)}</p>`).join("")}`:""}
+    ${red && a.how_to_help?`<h3>${ic("heart")}${esc(t("how_help"))}</h3><p class="help-box">${Lf(a.how_to_help)}</p>`:""}
+    <h3>${ic("book")}${esc(t("sources"))}</h3>
+    <ul style="margin:0;padding-left:20px">
+      <li><a href="${wikiUrl}" target="_blank" rel="noopener">Википедия: ${esc(a.wiki.replace(/_/g," "))}</a> (CC BY-SA) <span class="todo">TODO: научный источник</span></li>
+      ${red?`<li>${esc(L(SOURCES[0].t))}</li>`:""}
+    </ul>
+  </div>
+  <div class="m-actions">
+    <button type="button" class="btn" id="mShare">${ic("share")}${esc(t("share"))}</button>
+    <button type="button" class="btn ghost" id="mPrint">${ic("print")}${esc(t("print"))}</button>
+    <button type="button" class="btn ghost" id="mMap" data-mapsel="${a.id}">${ic("map")}${esc(t("show_on_map"))}</button>
+  </div>
+  <p class="verif">${esc(t("not_verified"))} ${esc(t("photo_todo"))}${esc(a.photoTodo)}.</p>`;
+}
+function showModal(id){
+  const a = byId(id); if (!a) return;
+  if (!openedId) lastFocus = document.activeElement;
+  openedId = id;
+  $("#mBody").innerHTML = modalHTML(a);
+  $("#modal").hidden = false;
+  document.body.style.overflow = "hidden";
+  $("#dialog").focus();
+  track("open_card", {id});
+}
+function hideModal(){
+  if (!openedId) return;
+  openedId = null;
+  $("#modal").hidden = true;
+  document.body.style.overflow = "";
+  if (lastFocus && document.contains(lastFocus)) lastFocus.focus();
+}
+function openAnimal(id){
+  if (location.hash === "#animal/"+id) { showModal(id); return; }
+  openedByPush = true;
+  location.hash = "animal/" + id;
+}
+function closeAnimal(){
+  if (openedByPush) { openedByPush = false; history.back(); }
+  else { try { history.replaceState(history.state, "", location.pathname + location.search); } catch(e){} hideModal(); }
+}
+function route(){
+  const m = location.hash.match(/^#animal\/([\w-]+)/);
+  if (m && byId(m[1])) showModal(m[1]); else { openedByPush = false; hideModal(); }
+}
+window.addEventListener("hashchange", route);
+
+$("#modal").addEventListener("keydown", e=>{
+  if (e.key === "Escape") { e.preventDefault(); closeAnimal(); return; }
+  if (e.key !== "Tab") return;
+  const f = $$("#dialog button, #dialog a[href], #dialog summary, #dialog [tabindex]:not([tabindex='-1'])").filter(el=>el.offsetParent!==null);
+  if (!f.length) return;
+  const first=f[0], last=f[f.length-1];
+  if (e.shiftKey && (document.activeElement===first || document.activeElement===$("#dialog"))) { e.preventDefault(); last.focus(); }
+  else if (!e.shiftKey && document.activeElement===last) { e.preventDefault(); first.focus(); }
+});
+$("#modalBd").addEventListener("click", closeAnimal);
+$("#closeModal").addEventListener("click", closeAnimal);
+$("#mBody").addEventListener("click", async e=>{
+  if (e.target.closest("#mShare")){
+    const url = location.href;
+    try { await navigator.clipboard.writeText(url); toast(t("copied")); }
+    catch(err){ const ta=document.createElement("textarea"); ta.value=url; document.body.appendChild(ta); ta.select(); try{document.execCommand("copy"); toast(t("copied"));}catch(e2){} ta.remove(); }
+  }
+  if (e.target.closest("#mPrint")){
+    document.body.classList.add("printing");
+    const d = $("#mBody details"); const wasOpen = d && d.open; if (d) d.open = true;
+    window.print();
+    setTimeout(()=>{ document.body.classList.remove("printing"); if (d) d.open = wasOpen; }, 300);
+  }
+  const mb = e.target.closest("[data-mapsel]");
+  if (mb){ const id = mb.dataset.mapsel; closeAnimal(); setTimeout(()=>{ selectMapAnimal(id); scrollToId("map"); }, 80); }
+});
+
+/* ================= КАРТА ================= */
+let mapSel = "", mapZone = "", leafletMap = null, zoneLayers = {}, layerCtl = null, zonesGroup = null, ooptGroup = null;
+function renderMapSide(){
+  const sel = $("#mapSelect");
+  const sorted = ANIMALS.slice().sort((x,y)=>L(x.name).localeCompare(L(y.name), lang));
+  sel.innerHTML = `<option value="">${esc(t("map_all"))}</option>` + sorted.map(a=>`<option value="${a.id}" ${a.id===mapSel?"selected":""}>${esc(L(a.name))}</option>`).join("");
+  const active = mapSel ? byId(mapSel).zones : null;
+  $("#zoneLegend").setAttribute("aria-label", t("f_zone"));
+  $("#zoneLegend").innerHTML = ZONES.map(z=>`<button type="button" data-mzone="${z.id}" aria-pressed="${z.id===mapZone}" class="${active && !active.includes(z.id) ? "dim":""}"><span class="swatch" style="background:${z.color}"></span>${esc(L(z.name))}</button>`).join("");
+  const zl = $("#zoneList");
+  if (mapZone){
+    const z = zoneById(mapZone);
+    const list = ANIMALS.filter(a=>a.zones.includes(mapZone)).sort((x,y)=>L(x.name).localeCompare(L(y.name), lang));
+    zl.innerHTML = `<h3>${esc(t("map_zone_species").replace("{z}", L(z.name)))}</h3><ul>${list.map(a=>`<li><button type="button" data-open="${a.id}">${esc(L(a.name))}</button></li>`).join("")}</ul>`;
+  } else zl.innerHTML = `<p style="margin:0;color:var(--muted)">${esc(t("map_pick_zone"))}</p>`;
+  styleMap();
+}
+function styleMap(){
+  if (!leafletMap) return;
+  const active = mapSel ? byId(mapSel).zones : null;
+  ZONES.forEach(z=>{
+    const on = active ? active.includes(z.id) : true;
+    const picked = z.id === mapZone;
+    zoneLayers[z.id].setStyle({color:z.color, weight:picked?3:1, fillColor:z.color, fillOpacity: active ? (on?0.7:0.06) : (z.id==="steppe"?0.18:0.45), opacity: on?0.9:0.2});
+  });
+}
+function selectMapAnimal(id){ mapSel = id; mapZone = ""; renderMapSide(); track("map_select",{id}); }
+function selectMapZone(id){ mapZone = mapZone===id ? "" : id; renderMapSide(); track("map_zone",{id}); }
+
+function loadLeaflet(){
+  return new Promise((res, rej)=>{
+    if (window.L) return res();
+    const css = document.createElement("link"); css.rel="stylesheet"; css.href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css"; document.head.appendChild(css);
+    const s = document.createElement("script"); s.src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js";
+    s.onload = res; s.onerror = rej; document.head.appendChild(s);
+    // Медленная сеть: показываем схему, но продолжаем ждать загрузку
+    setTimeout(()=>{ if (!window.L) mapFallback(); }, 8000);
+  });
+}
+function mapFallback(){ $("#mapStatus").innerHTML = `<div><p>${esc(t("map_fail"))}</p>${miniMap(mapSel?byId(mapSel).zones:ZONES.map(z=>z.id), t("map_title"))}</div>`; }
+function initMap(){
+  $("#mapStatus").textContent = t("map_loading");
+  loadLeaflet().then(()=>{
+    const Lf_ = window.L;
+    const mobile = Lf_.Browser.mobile;
+    leafletMap = Lf_.map("mapEl", {scrollWheelZoom:false, dragging:!mobile, tap:false, zoomSnap:0.5});
+    leafletMap.fitBounds(Lf_.latLngBounds(REGION), {padding:[10,10]});
+    Lf_.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {maxZoom:12, attribution:'&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>'}).addTo(leafletMap);
+    zonesGroup = Lf_.featureGroup(); ooptGroup = Lf_.featureGroup();
+    ["steppe","floodplain","lakes","bayanaul","settlements"].forEach(id=>{
+      const g = Lf_.featureGroup(GEO[id].map(r=>Lf_.polygon(r)));
+      g.on("click", ()=>selectMapZone(id));
+      g.bindTooltip(()=>L(zoneById(id).name), {sticky:true});
+      zoneLayers[id] = g; zonesGroup.addLayer(g);
+    });
+    OOPT.forEach(o=>{ Lf_.polygon(o.poly,{color:"#b3261e",weight:2,dashArray:"6 4",fill:false}).bindTooltip(()=>L(o.name)).addTo(ooptGroup); });
+    zonesGroup.addTo(leafletMap);
+    Lf_.polyline(IRTYSH,{color:"#2f6f96",weight:3,opacity:.8,interactive:false}).addTo(leafletMap);
+    buildLayerCtl();
+    $("#mapStatus").innerHTML = "";
+    styleMap();
+    if (mobile){
+      let ht; $("#mapEl").addEventListener("touchmove", e=>{ if (e.touches.length===1){ $("#mapHint").classList.add("show"); clearTimeout(ht); ht=setTimeout(()=>$("#mapHint").classList.remove("show"),1500);} }, {passive:true});
+    }
+  }).catch(err=>{ console.warn("Map unavailable:", err && err.message); mapFallback(); });
+}
+function buildLayerCtl(){
+  if (!leafletMap) return;
+  if (layerCtl) layerCtl.remove();
+  layerCtl = window.L.control.layers(null, {[t("map_layers_zones")]:zonesGroup, [t("map_layers_oopt")]:ooptGroup}, {collapsed:false}).addTo(leafletMap);
+}
+const mapObserver = new IntersectionObserver(entries=>{
+  if (entries.some(e=>e.isIntersecting)){ mapObserver.disconnect(); initMap(); }
+}, {rootMargin:"400px"});
+mapObserver.observe($("#map"));
+
+/* ================= ЯЗЫК ================= */
+function applyI18n(){
+  document.documentElement.lang = lang;
+  document.title = t("page_title");
+  document.querySelector('meta[name="description"]').content = t("page_desc");
+  $$("[data-i18n]").forEach(el=>{ el.textContent = t(el.dataset.i18n); });
+  $$("[data-i18n-ph]").forEach(el=>{ el.placeholder = t(el.dataset.i18nPh); });
+  $$("[data-i18n-aria]").forEach(el=>{ el.setAttribute("aria-label", t(el.dataset.i18nAria)); });
+  $$(".langs button").forEach(b=>b.setAttribute("aria-pressed", String(b.dataset.lang===lang)));
+}
+function renderCounters(){
+  const n = ANIMALS.length, m = ANIMALS.filter(a=>a.status.includes("redbook")).length;
+  $("#counters").innerHTML = `<span><b>${n}</b>${esc(t("cnt_species"))}</span><span><b>${m}</b>${esc(t("cnt_redbook"))}</span><span><b>${ZONES.length}</b>${esc(t("cnt_zones"))}</span>`;
+}
+function renderAll(){
+  applyI18n(); renderCounters(); renderZones(); renderFilters(); renderCatalog(); renderRedbook();
+  renderFactDay(); renderCarousel(); renderSources(); renderMapSide(); buildLayerCtl();
+  if (openedId) $("#mBody").innerHTML = modalHTML(byId(openedId));
+}
+function setLang(l){ if (!SUPPORTED.includes(l) || l===lang) return; lang = l; store.set("lang", l); renderAll(); writeURL(); track("lang",{lang:l}); }
+
+/* ================= НАВИГАЦИЯ ================= */
+function scrollToId(id){
+  const el = document.getElementById(id); if (!el) return;
+  const reduce = matchMedia("(prefers-reduced-motion: reduce)").matches;
+  el.scrollIntoView({behavior: reduce ? "auto" : "smooth", block:"start"});
+}
+document.addEventListener("click", e=>{
+  const nav = e.target.closest("a[data-nav]");
+  if (nav){ e.preventDefault(); const id = nav.getAttribute("href").slice(1); scrollToId(id); closeMenu(); return; }
+  const op = e.target.closest("[data-open]");
+  if (op){ openAnimal(op.dataset.open); return; }
+  const zc = e.target.closest("[data-zone]");
+  if (zc){ state.zone = new Set([zc.dataset.zone]); state.shown=PAGE; renderFilters(); renderCatalog(); scrollToId("animals"); track("filter",{zone:zc.dataset.zone}); return; }
+  const chip = e.target.closest("[data-chip]");
+  if (chip){ const [k,v] = chip.dataset.chip.split(":"); if (k==="q"){ state.q=""; $("#q").value=""; } else state[k].delete(v); state.shown=PAGE; renderFilters(); renderCatalog(); return; }
+  if (e.target.closest("[data-reset]")) { resetAll(); return; }
+  const mz = e.target.closest("[data-mzone]");
+  if (mz){ selectMapZone(mz.dataset.mzone); return; }
+  const turn = e.target.closest("[data-turn]");
+  if (turn){
+    const card = turn.closest(".flip"); const flipped = card.classList.toggle("flipped");
+    card.querySelector(".front").inert = flipped; card.querySelector(".back").inert = !flipped;
+    (flipped ? card.querySelector(".back .btn") : card.querySelector(".front .btn")).focus();
+    return;
+  }
+  if (e.target.closest("#anotherFact")){
+    let n; do { n = Math.floor(Math.random()*FACTS.length); } while (FACTS.length>1 && n===factIdx);
+    factIdx = n; factIsDaily = false; renderFactDay(); $("#anotherFact").focus(); return;
+  }
+  const lb = e.target.closest("[data-lang]");
+  if (lb){ setLang(lb.dataset.lang); return; }
+});
+
+const burger = $("#burger");
+burger.innerHTML = ic("menu");
+function closeMenu(){ $("#mainnav").classList.remove("open"); burger.setAttribute("aria-expanded","false"); }
+burger.addEventListener("click", ()=>{ const o = $("#mainnav").classList.toggle("open"); burger.setAttribute("aria-expanded", String(o)); });
+
+const navObserver = new IntersectionObserver(entries=>{
+  entries.forEach(en=>{ if (en.isIntersecting){ $$(".mainnav a").forEach(a=>a.classList.toggle("active", a.getAttribute("href")==="#"+en.target.id)); } });
+}, {rootMargin:"-45% 0px -50% 0px"});
+["hero","nature","animals","redbook","map","facts","sources"].forEach(id=>navObserver.observe(document.getElementById(id)));
+
+/* ================= ПОИСК И ФИЛЬТРЫ ================= */
+$("#heroIc").innerHTML = ic("search"); $("#qIc").innerHTML = ic("search");
+$("#closeFilters").innerHTML = ic("close"); $("#closeModal").innerHTML = ic("close");
+let qTimer;
+$("#q").value = state.q; $("#heroQ").value = state.q;
+$("#q").addEventListener("input", e=>{
+  clearTimeout(qTimer);
+  qTimer = setTimeout(()=>{ state.q = e.target.value; state.shown = PAGE; renderCatalog(); if (state.q.trim()) track("search",{q:state.q.trim()}); }, 200);
+});
+$("#heroSearch").addEventListener("submit", e=>{
+  e.preventDefault(); state.q = $("#heroQ").value; $("#q").value = state.q; state.shown = PAGE;
+  renderCatalog(); scrollToId("animals"); track("search",{q:state.q});
+});
+$("#filterGroups").addEventListener("change", e=>{
+  const cb = e.target.closest("input[data-f]"); if (!cb) return;
+  const set = state[cb.dataset.f]; cb.checked ? set.add(cb.value) : set.delete(cb.value);
+  state.shown = PAGE; renderCatalog(); track("filter",{[cb.dataset.f]:cb.value});
+});
+$("#sort").value = state.sort;
+$("#sort").addEventListener("change", e=>{ state.sort = e.target.value; renderCatalog(); });
+$("#more").addEventListener("click", ()=>{ const first = state.shown; state.shown += PAGE; renderCatalog(); const c = $$("#grid .card")[first]; if (c) c.focus(); });
+$("#resetEmpty").addEventListener("click", resetAll);
+$("#resetAll2").addEventListener("click", resetAll);
+$("#mapSelect").addEventListener("change", e=>selectMapAnimal(e.target.value));
+
+function openFilters(){ $("#filters").classList.add("open"); $("#backdropF").classList.add("open"); $("#filterToggle").setAttribute("aria-expanded","true"); $("#closeFilters").focus(); }
+function closeFilters(){ if (!$("#filters").classList.contains("open")) return; $("#filters").classList.remove("open"); $("#backdropF").classList.remove("open"); $("#filterToggle").setAttribute("aria-expanded","false"); $("#filterToggle").focus(); }
+$("#filterToggle").addEventListener("click", openFilters);
+$("#closeFilters").addEventListener("click", closeFilters);
+$("#backdropF").addEventListener("click", closeFilters);
+document.addEventListener("keydown", e=>{ if (e.key==="Escape"){ closeFilters(); closeMenu(); } });
+
+/* ================= СТАРТ ================= */
+renderAll();
+route();
+</script>
+</body>
+</html>
